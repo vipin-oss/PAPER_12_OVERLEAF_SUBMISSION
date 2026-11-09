@@ -130,7 +130,7 @@ the eighth is the compressibility and the added coupling, which appear in the ca
 rows and, through $\widehat\tau$, in the mechanical rows as well.  Equation
 \eqref{eq:block} is the construction: each block is one quadrature of the listed
 integrands against the Legendre basis, so the entries can be regenerated from the
-stated integrands without reading the program.
+stated integrands.
 
 Each block takes one power of $k_x$ from the test side and one from the trial
 side, but two of the nine vanish identically: $\mathsf A_{02}=\mathsf A_{20}=0$,
@@ -292,7 +292,7 @@ total propagating share, which is the quantity closest to a reflectance, is
 reported separately.
 
 
-Evaluating \eqref{eq:RB} at the operating point takes four stored numbers and
+Evaluating \eqref{eq:RB} at the operating point takes four numbers from the solution and
 three steps, and the steps are the ones a reader can repeat by hand.  The first is
 the power of the unit-amplitude backward mode at the edge, which the
 normalization makes independent of the degree:
@@ -357,7 +357,7 @@ between degree 18 and degree 30.
 When the energy angle of a mode approaches $\pm90^{\circ}$ its $x$ flux
 vanishes and the ratio loses meaning even though the mode itself is perfectly
 well resolved.  The flux fraction
-$|\cos\theta_E|=|P_x|/\sqrt{P_x^2+P_y^2}$ is stored with each row, and the two values quoted in this article have $|\cos\theta_E|=0.88$ and $0.97$.
+$|\cos\theta_E|=|P_x|/\sqrt{P_x^2+P_y^2}$ is evaluated at each point, and the two values quoted in this article have $|\cos\theta_E|=0.88$ and $0.97$.
 
 \subsection{Consistency and independent checks}
 \label{sec:numerics_verification}
@@ -425,5 +425,4 @@ $C^{1}$ plate (49 pts), first cell $0.00125\,d$ & 0.019320 & $+0.11$ \\
 The reciprocity of the operator at $+k_y$ and $-k_y$ holds to $10^{-13}$, which verifies the symmetry of the discretized bilinear form, including the added coupling.  The seven comparisons above are the independent evidence for the
 implementation; the practical resolution at which they are carried out, the
 convergence of the reported quantities with degree and quadrature, and the
-conservation residual are stated in \cref{app:repro}, and the full computational
-record is deposited with the code and data (see the data availability statement).
+conservation residual are stated in \cref{app:repro}.

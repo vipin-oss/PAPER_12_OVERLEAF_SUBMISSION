@@ -6,7 +6,7 @@ Compiler: pdfLaTeX (TeX Live 2023 or newer).  Needs only packages found in stand
 
 | File | What it is | Compile |
 |---|---|---|
-| `main.tex` + `sections/` + `references.bib` | the manuscript (54 pages, 12 pt) | set as main; pdflatex, bibtex, pdflatex x2 (Overleaf does this automatically) |
+| `main.tex` + `sections/` + `references.bib` | the manuscript (49 pages, 12 pt) | set as main; pdflatex, bibtex, pdflatex x2 (Overleaf does this automatically) |
 | `abstract.tex` | abstract only | compile alone -> `abstract.pdf` |
 | `highlights.tex` | five highlight bullets (each <= 85 characters) | compile alone |
 | `cover_letter.tex` | cover letter | compile alone |
@@ -22,5 +22,4 @@ To compile a standalone file in Overleaf: Menu -> Main document -> choose that f
 * Change `\documentclass`/layout to the target journal's template if required (all content is in
   `sections/`, so only `main.tex` needs changing).
 
-The `.bib` has 60 entries, each with a DOI.  The programs that produce every number and figure are in
-the separate package `PAPER_A_PROGRAM_PACKAGE.zip`.
+The `.bib` has 60 entries, each with a DOI.  The manuscript contains no reference to code or data files.  `main.tex` has a data-availability line ("included in this article; further detail on reasonable request"); change it to the journal's wording if needed.

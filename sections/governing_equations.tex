@@ -377,7 +377,7 @@ a=\frac{k_BT}{n_0},\qquad L_D=\sqrt{\frac{\kappa_{33}k_BT}{q^2n_0}},
 \end{equation*}
 and the model is governed by the five dimensionless numbers of
 \cref{tab:groups}.  Each is an exact ratio of two physical lengths, times or
-energies, and each is reproduced numerically from the material file.
+energies, and each follows directly from the parameters listed below.
 
 \begin{table}[t]
 \centering
@@ -399,7 +399,7 @@ $h$ & $H/(d\sqrt{a\,c_{44}})$ & $\pm1.06\times10^{-2}$ & carrier--gradient coupl
 \paragraph{Parameters and their provenance.}\label{sec:params}
 The classical constants are literature values ($c_{11}=210$, $c_{33}=221$, $c_{44}=43\,\si{\giga\pascal}$; $e_{33}=1.32$, $e_{31}=-0.57$, $e_{15}=-0.48\,\si{\coulomb\per\square\metre}$; $\kappa_{33}=8.85\times10^{-11}\,\si{\farad\per\metre}$, from Table~1 of \cite{zhang2025pscplate}).  The transport parameters are representative values for n-type ZnO: $\mu_e=0.0175\,\si{\square\metre\per\volt\per\second}$ and $D=4.55\times10^{-4}\,\si{\square\metre\per\second}$, equal to $\mu_ek_BT/q$ at $T=\SI{301.7}{\kelvin}$ and within the $120$--$\SI{205}{\square\centi\metre\per\volt\per\second}$ compiled for nominally undoped bulk and film ZnO in Table~VII of \cite{ozgur2005zno}; the density $n_0=1$--$3\times10^{18}\,\si{\per\cubic\metre}$ is a modeling scenario below the $8\times10^{19}$--$5\times10^{23}\,\si{\per\cubic\metre}$ of that table, and $d=\SI{200}{\nano\metre}$ is a reference thickness (sweep $120$--$\SI{320}{\nano\metre}$).  The strain-gradient length $\ell=\SI{50}{\nano\metre}$, the flexoelectric coefficient $f_{3zz}=\SI{1}{\nano\coulomb\per\metre}$ (in the nC/m range reported for ZnO \cite{hu2025computational,zhao2021effects}; it contributes \SI{-0.01}{\percent} to $R_B$) and the coupling $H_{333}$ are \emph{assumed}; the same form $g=\ell^2c$ is used in \cite{qu2023drag} with \SI{20}{\nano\metre} for silicon.  For $H_{jkl}$ no published value is available: the numbers used, $|H|\le\SI{2.0e-23}{\joule\metre}=0.022\,H_{\text{bound}}$, are fixed by the positivity bound \eqref{eq:schur}, which leaves a margin of a factor of forty-five in $H$.
 
-The groups follow from the material file by algebra, so their verification is a comparison of numbers and not a fit.  The elastic speed is
+The groups follow from the listed parameters by algebra, so their verification is a comparison of numbers and not a fit.  The elastic speed is
 $c_s=\sqrt{c_{44}/\rho}=\SI{2.7466}{\kilo\metre\per\second}$, giving the frequency unit
 $c_s/(2\pi d)=\SI{2.1857}{\giga\hertz}$ at $d=\SI{200}{\nano\metre}$; the operating point
 $\omega=7.6334\,c_s/d$ is then $f=\SI{16.684}{\giga\hertz}$, the value quoted in the abstract.
