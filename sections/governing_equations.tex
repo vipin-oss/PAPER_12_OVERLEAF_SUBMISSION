@@ -7,25 +7,7 @@ The formulation follows the order in which one enthalpy generates the constituti
 \label{sec:governing_variational}
 \label{sec:governing_kinematics}
 
-Consider a transversely isotropic ($6mm$) n-type ZnO plate of thickness $d$
-whose faces are the planes $z=\pm d/2$, occupying the half-space $x<0$ and
-terminating at a traction-free edge at $x=0$.  The plate is unbounded in $y$, so
-a single tangential wavenumber $k_y$ is conserved, and each field has the form
-$f(x,z)\,e^{ik_yy-i\omega t}$ with three displacement components retained.  The formulation is thus two-and-a-half-dimensional (2.5D): a discrete
-cross-section in $(x,z)$ carrying full three-component kinematics, a single
-conserved tangential wavenumber, and no discretization of $y$.  The independent fields are
-the displacement $u_i(\vect{x},t)$, the electrostatic potential
-$\varphi(\vect{x},t)$ and the electron-number perturbation
-$\Delta n(\vect{x},t)$ measured from the uniform doping $n_0$.  The polar $c$
-axis of the crystal is $x_3\equiv z$; Latin indices run over $1,2,3$, a comma
-denotes a spatial derivative and a superimposed dot a time derivative.
-
-Three conventions are fixed once and used everywhere.  The electric field is
-$E_i=-\partial_i\varphi$.  The electron charge is $-q$ with $q>0$.  The
-quantity $\widetilde\mu$ is the \emph{electrochemical potential of an electron
-per carrier}, measured in joules, so that each term appearing in it is an
-energy and no term is a dimensionless ratio.
-
+Consider a transversely isotropic ($6mm$) n-type ZnO plate of thickness $d$ whose faces are the planes $z=\pm d/2$.  The plate occupies $x<0$ and ends at a traction-free edge at $x=0$.  It is unbounded in $y$, so a single tangential wavenumber $k_y$ is conserved and every field has the form $f(x,z)\,e^{\ii k_yy-\ii\omega t}$ with all three displacement components retained.  The formulation is therefore two-and-a-half-dimensional: the $(x,z)$ cross-section is discretized, $y$ is not.  The independent fields are the displacement $u_i(\vect{x},t)$, the electrostatic potential $\varphi(\vect{x},t)$ and the electron-number perturbation $\Delta n(\vect{x},t)$ measured from the uniform doping $n_0$.  The polar $c$ axis is $x_3\equiv z$.  Latin indices run over $1,2,3$, a comma denotes a spatial derivative and a dot a time derivative.  The electric field is $E_i=-\partial_i\varphi$, the electron charge is $-q$ with $q>0$, and $\widetilde\mu$ is the electrochemical potential of an electron per carrier, measured in joules.
 
 The small-strain tensor and its gradient are
 \begin{equation}
@@ -34,13 +16,9 @@ The small-strain tensor and its gradient are
 \qquad
 \eta_{ijk}\equiv\varepsilon_{ij,k}=\tfrac12\bigl(u_{i,jk}+u_{j,ik}\bigr),
 \end{equation}
-so that $\eta_{ijk}$ is symmetric in its first two indices,
-$\eta_{ijk}=\eta_{jik}$, and has the dimension of an inverse length.
-All three displacement components are retained; the strain has six independent
-components and the strain gradient eighteen.
+so that $\eta_{ijk}=\eta_{jik}$ and $\eta_{ijk}$ has the dimension of an inverse length.  The strain has six independent components and the strain gradient eighteen.
 
-The higher-order elastic energy is taken in the single-length
-(isotropic-gradient) form
+The higher-order elastic energy is taken in the single-length (isotropic-gradient) form
 \begin{equation}
 \label{eq:gradient_energy}
 w_g=\tfrac12\,A_{ijklmn}\,\eta_{ijk}\,\eta_{lmn}
@@ -48,44 +26,9 @@ w_g=\tfrac12\,A_{ijklmn}\,\eta_{ijk}\,\eta_{lmn}
 \qquad
 A_{ijklmn}=\ell^{2}\,c_{ijlm}\,\delta_{kn},
 \end{equation}
-where in \eqref{eq:gradient_energy} the \emph{third and sixth slots} of
-$A_{ijklmn}$ are the gradient directions: the third slot is contracted with the
-gradient index of the first strain gradient and the sixth with that of the
-second.  This is the only contraction for which the energy depends on the
-gradient of the strain through $c_{ijlm}\eta_{ijk}\eta_{lmk}$; contracting any
-other pair of slots would break the major symmetry
-$A_{ijklmn}=A_{lmnijk}$ that a second derivative of an energy must possess.  The two candidate contractions are also distinguishable by their spectra: the
-fundamental shear-horizontal branch of \eqref{eq:gradient_energy} has the closed
-form and is reproduced to
-$10^{-10}$, which the alternative contraction does not allow.
+in which the third and sixth slots of $A_{ijklmn}$ are the gradient directions.  This is the contraction that preserves the major symmetry $A_{ijklmn}=A_{lmnijk}$ required of a second derivative of an energy.
 
-Every unit in the formulation follows from one derivative of an energy, so the units are read off from these derivatives rather than from a list of dimensions.
-The displacement $u_i$ is a length (m); the strain \eqref{eq:strain} is its
-gradient and so is dimensionless, and the strain gradient $\eta_{ijk}$
-has the dimension of an inverse length (m$^{-1}$).  A stress is an energy density,
-$\sigma_{ij}=\partial w/\partial\varepsilon_{ij}$, so both $\sigma_{ij}$ and the
-elastic stiffness $c_{ijkl}$ are pascals.  The hyperstress is the derivative of
-the same energy with respect to a quantity that already has one inverse
-length, $\tau_{ijk}=\partial w/\partial\eta_{ijk}$, so it is a force per unit
-length ($\mathrm{N\,m^{-1}}$) and not a stress, and the gradient modulus
-$A_{ijklmn}=\partial\tau_{ijk}/\partial\eta_{lmn}$ is a force
-($\mathrm{N}=\mathrm{J\,m^{-1}}$), one factor of length times the elastic stiffness.  The double
-divergence $\partial_i\partial_k\tau_{jik}$ is a force density, which is what
-the balance law \eqref{eq:momentum} requires.  The piezoelectric constant
-$e_{kij}=\partial\sigma_{ij}/\partial E_k$ is a charge per unit area
-(\si{\coulomb\per\square\metre}), the permittivity $\kappa_{ij}$ is a charge
-per unit area per unit field (\si{\farad\per\metre}), and the flexoelectric
-constant $f_{ijkl}=\partial D_i/\partial\eta_{jkl}=-\partial\tau_{jkl}/\partial
-E_i$ is a charge per unit length (\si{\coulomb\per\metre}), one factor of
-length below $e$.  In the carrier sector $\Delta n$ is a number density
-(m$^{-3}$), $\widetilde\mu$ is an energy per carrier (J), the compressibility
-$a=k_BT/n_0$ is an energy times a volume ($\mathrm{J\,m^{3}}$) and the
-coupling $H_{jkl}=\partial\widetilde\mu/\partial\eta_{jkl}=\partial\tau_{jkl}/
-\partial(\Delta n)$ is an energy times a length (\si{\joule\metre}), the one
-non-classical unit in the model.  These three non-classical units ($\mathrm{N}=\mathrm{J\,m^{-1}}$ for $A$, $\mathrm{N\,m^{-1}}$ for $\tau_{ijk}$ and
-\si{\joule\metre} for $H_{jkl}$) are the ones most easily mis-stated, and
-each is fixed by the derivative that produced it.
-
+The units follow from the derivatives of the energy.  Stress $\sigma_{ij}=\partial w/\partial\varepsilon_{ij}$ and stiffness $c_{ijkl}$ are in pascals.  The hyperstress $\tau_{ijk}=\partial w/\partial\eta_{ijk}$ is a force per unit length (\si{\newton\per\metre}), the gradient modulus $A_{ijklmn}$ is a force (\si{\newton}), and the flexoelectric constant $f_{ijkl}=\partial D_i/\partial\eta_{jkl}$ is a charge per unit length (\si{\coulomb\per\metre}).  In the carrier sector $\Delta n$ is a number density (\si{\per\cubic\metre}), the compressibility $a=k_BT/n_0$ is an energy times a volume, and the coupling $H_{jkl}=\partial\widetilde\mu/\partial\eta_{jkl}=\partial\tau_{jkl}/\partial(\Delta n)$ is an energy times a length (\si{\joule\metre}), the one non-classical unit of the model.
 
 \subsection{Constitutive relations and the balance laws}
 \label{sec:governing_constitutive}
@@ -127,7 +70,7 @@ $H\equiv H_{zzz}$, is retained in the executed calculations, so that
 \paragraph{Relation to the thermodynamic framework.}
 The closest primary work is the thermodynamically consistent theory of Qu, Pan, Zhu and Deng \cite{qu2025thermodynamic}, which derives the constitutive equations of a flexoelectric semiconductor from the free-energy imbalance and contains the drift--diffusion current, the flexoelectric and piezoelectric couplings and the higher-order stress in one framework.  Its explicit free energy, reproduced in \cite{hu2025computational}, is additive and its carrier energy contains no strain gradient, so in that form the strain gradient reaches the carriers only through the flexoelectric polarization that enters Gauss's law.  The bilinear term $\Delta n\,H_{jkl}\varepsilon_{jk,l}$ of \eqref{eq:added_coupling} is absent from that form but not from the article: its Appendix~C.1 adds a chemo-mechanical energy that is linear in the carrier concentration and in the strain gradient, and the part $M^{n}_{IJK}$ corresponds to $H_{jkl}$ here; the article neglects it in its main text and does not pose an edge-scattering problem.  The term is therefore not claimed as new, and what is new is the scattering problem it is used in.  The symbol $H$ is overloaded in the literature: in \cite{hu2025computational} it denotes the sixth-order strain-gradient elasticity tensor, written $A_{ijklmn}$ here, whereas $H_{jkl}$ is a third-order carrier--strain-gradient coefficient (J\,m) and the two are unrelated.  The incremental effect of the term on the edge partition, and the fact that it is not the origin of the backward branch, are quantified in \cref{sec:results_mechanism,sec:results_coupling}.
 
-The internal-energy density of the model is
+The electric enthalpy density of the model is
 \begin{equation}
 \label{eq:enthalpy}
 \begin{aligned}
@@ -879,7 +822,7 @@ energies, and each is reproduced numerically from the material file.
 
 \begin{table}[t]
 \centering
-\caption{Dimensionless groups and their values at the operating point; $T=\SI{301.7}{\kelvin}$ follows from the Einstein relation.}
+\caption{Dimensionless groups and their values at the operating point; $T=\SI{301.7}{\kelvin}$ follows from the Einstein relation; $h$ is given at the largest coupling examined, $|H|=\SI{2.0e-23}{\joule\metre}$.}
 \label{tab:groups}
 \begin{tabular}{@{}llll@{}}
 \toprule
@@ -889,7 +832,7 @@ $Q$ & $d/L_D$ & $7.46\times10^{-2}$ & thickness over Debye length \\
 $\alpha_{\mathrm{d}}$ & $D/(d\,c_s)$ & $8.28\times10^{-1}$ & diffusion rate over elastic rate \\
 $\lambda$ & $\ell/d$ & $2.50\times10^{-1}$ & gradient length over thickness \\
 $f$ & $f_{3zz}/(d\sqrt{c_{44}\kappa_{33}})$ & $2.56\times10^{-3}$ & flexoelectric coupling \\
-$h$ & $H/(d\sqrt{a\,c_{44}})$ & $\eta\times2.12\times10^{-1}$ & carrier--gradient coupling \\
+$h$ & $H/(d\sqrt{a\,c_{44}})$ & $\pm1.06\times10^{-2}$ & carrier--gradient coupling (at $|H|_{\max}$) \\
 \bottomrule
 \end{tabular}
 \end{table}
