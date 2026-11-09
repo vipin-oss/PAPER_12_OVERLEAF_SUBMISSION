@@ -277,12 +277,9 @@ written in scaled variables, with $\widetilde\mu$ the total electrochemical-pote
 \subsection{Plane-wave reduction and the characteristic polynomial}
 \label{sec:governing_reduction}
 
-The plate is invariant along $y$ and in time, so a single tangential wavenumber
-and a single frequency are conserved by the linear problem and any field can be written as an amplitude in the thickness times a propagating factor,
-\begin{equation*}
-f(x,y,z,t)=\widehat f(z)\,\ee^{\ii(k_xx+k_yy-\omega t)} ,
-\end{equation*}
-for which the four derivative operators act as
+The plate is invariant along $y$ and in time, so a single tangential wavenumber and
+frequency are conserved and every field takes the form
+$f=\widehat f(z)\,\ee^{\ii(k_xx+k_yy-\omega t)}$, for which
 \begin{equation}
 \label{eq:substitution}
 \partial_t\to-\ii\omega,\qquad
@@ -290,58 +287,45 @@ for which the four derivative operators act as
 \partial_y\to\ii k_y,\qquad
 \partial_z\to\frac{\dd}{\dd z}\equiv{}' .
 \end{equation}
-Substituting \eqref{eq:substitution} in \eqref{eq:strain} gives the six strain
-components in terms of the three displacement amplitudes,
-\begin{equation*}
-\begin{aligned}
-\widehat\varepsilon_{xx}&=\ii k_x\widehat u_1, &
-\widehat\varepsilon_{yy}&=\ii k_y\widehat u_2, &
-\widehat\varepsilon_{zz}&=\widehat u_3',\\
-\widehat\varepsilon_{yz}&=\tfrac12\bigl(\widehat u_2'+\ii k_y\widehat u_3\bigr),&
-\widehat\varepsilon_{xz}&=\tfrac12\bigl(\widehat u_1'+\ii k_x\widehat u_3\bigr),&
-\widehat\varepsilon_{xy}&=\tfrac12\ii\bigl(k_x\widehat u_2+k_y\widehat u_1\bigr),
-\end{aligned}
-\end{equation*}
-and the eighteen strain-gradient components follow from
-$\eta_{ijk}=\varepsilon_{ij,k}$ with the same three replacements, each $x$
-derivative multiplying by $\ii k_x$, each $y$ derivative by $\ii k_y$ and each
-$z$ derivative acting on the amplitude.  Two representative entries are
-\begin{equation*}
-\widehat\eta_{xxx}=\partial_x\widehat\varepsilon_{xx}=-k_x^{2}\widehat u_1,
-\qquad
-\widehat\eta_{zzz}=\partial_z\widehat\varepsilon_{zz}=\widehat u_3'',
-\end{equation*}
-and the electric field is $\widehat E_x=-\ii k_x\widehat\varphi$,
-$\widehat E_z=-\widehat\varphi'$.  The continuity equation
-\eqref{eq:continuity} reduces to the algebraic statement
-$-\ii\omega\widehat N+\partial_i\widehat J_i=0$, so the carrier amplitude is
-carried by the same amplitude vector as the displacements, with no independent time evolution.
+The strain, strain-gradient and field components follow by applying
+\eqref{eq:substitution} to \eqref{eq:strain}; for example
+$\widehat\varepsilon_{xx}=\ii k_x\widehat u_1$,
+$\widehat\eta_{xxx}=-k_x^{2}\widehat u_1$, $\widehat\eta_{zzz}=\widehat u_3''$ and
+$\widehat E_x=-\ii k_x\widehat\varphi$.  The continuity equation
+\eqref{eq:continuity} becomes algebraic, so the carrier amplitude is carried by the
+same amplitude vector as the displacements and has no independent time evolution.
 
-The two balance laws then become a system of ordinary differential equations in
-$z$ for the four amplitudes $(\widehat u_1,\widehat u_2,\widehat u_3,
-\widehat\varphi)$ together with $\widehat N$, and the dependence of that system
-on the propagation direction is fixed by power counting.  The stress enters the
-mechanical balance through one derivative, $\partial_i\sigma_{ij}$, and $\sigma$
-is linear in $\varepsilon$ and $E$, both of which contain one power of $k$; so the stress term is at most quadratic in $k_x$.  The hyperstress enters
-through two derivatives, $\partial_i\partial_k\tau_{jik}$, and $\tau$ likewise
-contains one power of $k$; so that term is at most quartic in $k_x$.  No
-higher power can arise, because no field in \eqref{eq:enthalpy} contains more than
-one gradient.  Written as a matrix acting on the vector $\vect q$ of thickness
-degrees of freedom, the reduced problem is strictly quartic,
+The dependence on $k_x$ is fixed by derivative counting.  The stress $\sigma$ is linear in
+$\varepsilon$ and $E$, each containing one power of $k_x$, and enters the
+mechanical balance through one further derivative, so that term is at most quadratic
+in $k_x$.  The hyperstress $\tau$ is linear in $\eta$, which contains two powers, and
+enters through two derivatives, so that term is at most quartic.  No field in
+\eqref{eq:enthalpy} carries more than one gradient, so no higher power arises.  For a
+vector $\vect q$ of thickness degrees of freedom the reduced problem is therefore a
+polynomial of degree four in $k_x$,
 \begin{equation}
 \label{eq:quartic}
 \Bigl[\mathsf A_{00}
 +\ii k_x\bigl(\mathsf A_{01}-\mathsf A_{10}\bigr)
-+k_x^{2}\bigl(\mathsf A_{11}-\mathsf A_{02}-\mathsf A_{20}\bigr)
++k_x^{2}\mathsf A_{11}
 +\ii k_x^{3}\bigl(\mathsf A_{12}-\mathsf A_{21}\bigr)
 +k_x^{4}\,\mathsf A_{22}\Bigr]\vect q=\vect 0 ,
 \end{equation}
-where $\mathsf A_{rs}$ collects the terms that contain $\partial_x^{r}$ inside the
-left test function and $\partial_x^{s}$ inside the right one; their construction
-is described with the discretization.  Read by sectors and not by powers of $k_x$, the same operator has a
-$3\times3$ block structure whose entries can be named: with the unknowns ordered
-as $(\widehat{\vect u},\widehat{\boldsymbol\varphi},\widetilde{\boldsymbol\mu})$
-and suppressing the $k_x$ powers,
+where $\mathsf A_{rs}$ collects the terms containing $\partial_x^{r}$ on the left test
+function and $\partial_x^{s}$ on the right one (their construction is given with the
+discretization), and the $k_x^{2}$ coefficient reduces to $\mathsf A_{11}$ because
+$\mathsf A_{02}+\mathsf A_{20}$ does not arise from this enthalpy.  The odd coefficients
+are Hermitian, being $\ii$ times antisymmetric differences; the even ones carry the
+non-Hermitian carrier transport form.  The degree is exactly four only for $\ell\neq0$:
+$\mathsf A_{22}$ and $\mathsf A_{12}$ come from the strain-gradient energy alone, so
+for $\ell=0$ (with $f$ and $H$ removed) $\mathsf A_{22}=\mathsf A_{12}=0$ and
+\eqref{eq:quartic} collapses to the quadratic problem of the classical
+piezoelectric-semiconductor plate.  The fourth-order structure is thus a property
+of the strain-gradient energy, not of the carrier physics.
+
+Read by sectors and not by powers of $k_x$, the same operator has a $3\times3$ block
+structure.  With unknowns ordered as
+$(\widehat{\vect u},\widehat{\boldsymbol\varphi},\widetilde{\boldsymbol\mu})$,
 \begin{equation}
 \label{eq:sector_blocks}
 \mathsf A(k_x,\omega)=
@@ -364,56 +348,15 @@ and suppressing the $k_x$ powers,
 \end{aligned}
 \end{equation}
 where the carrier form $-\langle\mathsf W,\mathsf W\rangle$ of \eqref{eq:block}, with
-$\mathsf W=(-h\,b_j''\text{ in the }\widehat u_3\text{ slots},\;Q\psi_j,\;b_j)$ and the prime the derivative with respect to $z/d$,
-also contributes $-h^{2}\langle b'',b''\rangle$ to $\mathsf A_{uu}$, $+hQ\langle b'',\psi\rangle$ to $\mathsf A_{u\varphi}$,
-$+h\langle b'',b\rangle$ to $\mathsf A_{u\mu}$ and $-Q^{2}\langle\psi,\psi\rangle$ to $\mathsf A_{\varphi\varphi}$, and in which
-$\mathsf A_{\varphi u}=\mathsf A_{u\varphi}^{\mathsf H}$ and
-$\mathsf A_{\mu u}$, $\mathsf A_{\mu\varphi}$ are the transposes of the two
-couplings written, because they are the same derivatives of the same enthalpy
-taken in the other order.  The symmetric part of \eqref{eq:sector_blocks} is the
-Hessian of the discretized enthalpy; the only antisymmetric contribution is the
-carrier transport form, and that is the entire source of loss in the problem.
-
-Power by power, \eqref{eq:quartic} is
-\begin{equation}
-\label{eq:coeffs}
-\mathsf A(k_x)=\mathsf A_0+k_x\mathsf A_1+k_x^{2}\mathsf A_2
-+k_x^{3}\mathsf A_3+k_x^{4}\mathsf A_4,
-\qquad
-\begin{aligned}
-\mathsf A_0&=\mathsf A_{00},&
-\mathsf A_1&=\ii\bigl(\mathsf A_{01}-\mathsf A_{10}\bigr),\\
-\mathsf A_2&=\mathsf A_{11}-\mathsf A_{02}-\mathsf A_{20}=\mathsf A_{11},&
-\mathsf A_3&=\ii\bigl(\mathsf A_{12}-\mathsf A_{21}\bigr),\\
-\mathsf A_4&=\mathsf A_{22},&&
-\end{aligned}
-\end{equation}
-so that $\mathsf A_1$ and $\mathsf A_3$ are Hermitian (they are $\ii$ times the
-antisymmetric part of a Hermitian pair) while $\mathsf A_2=\mathsf A_{11}$ and
-$\mathsf A_0$ inherit the non-Hermitian transport form of
-\eqref{eq:sector_blocks}.  The number of blocks is fixed by counting derivatives,
-and that count is made explicitly here, because it is what limits the
-polynomial to degree four.  A term of the enthalpy can contribute at most one
-power of $k_x$ per derivative that falls on a factor carrying an $x$ dependence:
-$\varepsilon$ gives one, $\eta=\partial\varepsilon$ gives two, $E=-\partial
-\varphi$ gives one, and $\Delta n$ and $\widetilde\mu$ give none.  The
-mechanical weak form of \eqref{eq:weak_mech} reaches $k_x^{2}$ from
-$\sigma:\varepsilon^{*}$ and $k_x^{4}$ from $\tau\vdots\eta^{*}$, and no term
-reaches $k_x^{3}$ on one side alone; the odd powers of \eqref{eq:coeffs} appear
-only as the antisymmetric differences $\mathsf A_{01}-\mathsf A_{10}$ and
-$\mathsf A_{12}-\mathsf A_{21}$, which is why they appear with the explicit factor
-$\ii$.  With $\ell=0$ the $\tau$ term disappears, $\mathsf A_4=\mathsf A_3=0$ and
-\eqref{eq:coeffs} is quadratic in $k_x$; that is the classical
-piezoelectric-semiconductor plate, and it is the reduction against which the
-fourth-order structure is measured numerically.
-
-The two highest blocks are
-generated by the strain-gradient sector alone: with $\ell=0$, and with the
-flexoelectric constant and the added coupling removed with it, $\mathsf A_{22}$
-and $\mathsf A_{12}$ vanish identically and \eqref{eq:quartic} collapses to the
-familiar quadratic piezoelectric-semiconductor problem.  That collapse is the
-statement that the fourth-order structure of the plate problem is the
-strain-gradient energy, not the carrier physics.
+$\mathsf W=(-h\,b_j''\text{ in the }\widehat u_3\text{ slots},\;Q\psi_j,\;b_j)$ and the
+prime the derivative with respect to $z/d$, also contributes
+$-h^{2}\langle b'',b''\rangle$ to $\mathsf A_{uu}$, $+hQ\langle b'',\psi\rangle$ to
+$\mathsf A_{u\varphi}$, $+h\langle b'',b\rangle$ to $\mathsf A_{u\mu}$ and
+$-Q^{2}\langle\psi,\psi\rangle$ to $\mathsf A_{\varphi\varphi}$.  The remaining
+blocks are the Hermitian transposes of those written, being the same derivatives of the
+same enthalpy taken in the other order.  The symmetric part of \eqref{eq:sector_blocks}
+is the Hessian of the discretized enthalpy; the carrier transport form is the only
+antisymmetric contribution and the entire source of loss.
 
 \subsection{Non-dimensionalization, limits and admissibility}
 \label{sec:governing_nondim}
@@ -453,70 +396,25 @@ $h$ & $H/(d\sqrt{a\,c_{44}})$ & $\pm1.06\times10^{-2}$ & carrier--gradient coupl
 \paragraph{Parameters and their provenance.}\label{sec:params}
 The classical constants are literature values ($c_{11}=210$, $c_{33}=221$, $c_{44}=43\,\si{\giga\pascal}$; $e_{33}=1.32$, $e_{31}=-0.57$, $e_{15}=-0.48\,\si{\coulomb\per\square\metre}$; $\kappa_{33}=8.85\times10^{-11}\,\si{\farad\per\metre}$, from Table~1 of \cite{zhang2025pscplate}).  The transport parameters are representative values for n-type ZnO: $\mu_e=0.0175\,\si{\square\metre\per\volt\per\second}$ and $D=4.55\times10^{-4}\,\si{\square\metre\per\second}$, equal to $\mu_ek_BT/q$ at $T=\SI{301.7}{\kelvin}$ and within the $120$--$\SI{205}{\square\centi\metre\per\volt\per\second}$ compiled for nominally undoped bulk and film ZnO in Table~VII of \cite{ozgur2005zno}; the density $n_0=1$--$3\times10^{18}\,\si{\per\cubic\metre}$ is a modeling scenario below the $8\times10^{19}$--$5\times10^{23}\,\si{\per\cubic\metre}$ of that table, and $d=\SI{200}{\nano\metre}$ is a reference thickness (sweep $120$--$\SI{320}{\nano\metre}$).  The strain-gradient length $\ell=\SI{50}{\nano\metre}$, the flexoelectric coefficient $f_{3zz}=\SI{1}{\nano\coulomb\per\metre}$ (in the nC/m range reported for ZnO \cite{hu2025computational,zhao2021effects}; it contributes \SI{-0.01}{\percent} to $R_B$) and the coupling $H_{333}$ are \emph{assumed}; the same form $g=\ell^2c$ is used in \cite{qu2023drag} with \SI{20}{\nano\metre} for silicon.  For $H_{jkl}$ no published value is available: the numbers used, $|H|\le\SI{2.0e-23}{\joule\metre}=0.022\,H_{\text{bound}}$, are fixed by the positivity bound \eqref{eq:schur}, which leaves a margin of a factor of forty-five in $H$.
 
-The groups are evaluated once by hand, because the arithmetic is what
-connects the scaled problem to the measured units of the figures and each later number is a multiple of one of these five.  The elastic wave speed is
-\begin{equation*}
-c_s=\sqrt{\frac{c_{44}}{\rho}}
-=\sqrt{\frac{\SI{43.0}{\giga\pascal}}{\SI{5.70e3}{\kilo\gram\per\cubic\metre}}}
-=\SI{2.7466}{\kilo\metre\per\second},
-\end{equation*}
-so the unit of frequency at $d=\SI{200}{\nano\metre}$ is
-$c_s/(2\pi d)=\SI{2.1857}{\giga\hertz}$, and the operating point
-$\omega=7.6334\,c_s/d$ is $f=7.6334\times\SI{2.1857}{\giga\hertz}=
-\SI{16.684}{\giga\hertz}$, the value quoted in the abstract.  The
-compressibility is
-\begin{equation*}
-a=\frac{k_BT}{n_0}=\frac{(\SI{1.380649e-23}{\joule\per\kelvin})
-(\SI{301.72}{\kelvin})}{\SI{2.0e18}{\per\cubic\metre}}
-=\SI{2.0828e-39}{\joule\metre^{3}},
-\end{equation*}
-with $T=\SI{301.72}{\kelvin}$ the temperature implied by the Einstein relation for
-the diffusivity--mobility pair used; it is not an independent input.  The
-Debye length and the charge group follow from it as
-{\small\begin{equation*}
-L_D=\sqrt{\frac{\kappa_{33}k_BT}{q^{2}n_0}}
-=\sqrt{\frac{(\SI{8.85e-11}{\farad\per\metre})(\SI{4.1657e-21}{\joule})}
-{(\SI{1.6022e-19}{\coulomb})^{2}(\SI{2.0e18}{\per\cubic\metre})}}
-=\SI{2.6797}{\micro\metre},
-\qquad
-Q=\frac{d}{L_D}=0.074635 .
-\end{equation*}}
-The Debye length is then $13.40$ times the thickness, $L_D/d=1/Q=13.40$,
-so the plate is thinner than one screening length by more than an order of
-magnitude and the carrier perturbation is not confined to a surface layer.  The screening enters each block of \eqref{eq:block} with the small
-coefficient $Q^{2}=5.57\times10^{-3}$ multiplying the potential--potential
-term.  The
-transport group is
-\begin{equation*}
-\alpha_{\mathrm d}=\frac{D}{d\,c_s}
-=\frac{\SI{4.55e-4}{\square\metre\per\second}}
-{(\SI{200}{\nano\metre})(\SI{2.7466}{\kilo\metre\per\second})}
-=0.8283 ,
-\end{equation*}
-of order unity: the diffusion time across the thickness,
-$d^{2}/D=\SI{8.8e-11}{\second}$, is comparable to the elastic transit time
-$2d/c_s=\SI{1.5e-10}{\second}$, so the carrier and elastic sectors are not
-separated by a small parameter, and this is the reason the carrier must be
-kept in the eigenvalue problem and cannot be condensed away.  Finally the
-gradient and coupling groups follow from the same numbers,
-\begin{equation*}
-\lambda=\frac{\ell}{d}=\frac{\SI{50}{\nano\metre}}{\SI{200}{\nano\metre}}=0.25 ,
-\qquad
-h=\frac{H}{d\sqrt{a\,c_{44}}}=\frac{H}{\SI{1.8927e-21}{\joule\metre}} ,
-\end{equation*}
-so the tabulated extreme $|H|=\SI{2.0e-23}{\joule\metre}$ is
-$h=\pm1.06\times10^{-2}$, a one percent perturbation of the carrier sector at
-the largest coupling examined.  Each of these five chains is an identity: the material file gives $(c_{44},\rho,k_BT,n_0,\kappa_{33},q,D,d,\ell,H)$ and the
-groups are algebra, which is why the verification is a comparison of numbers and not a fit.
-
-The coupling constant $h$ of \cref{tab:groups} is dimensionless for the
-following reason.  The compressibility $a=k_BT/n_0$ has units of J\,m$^3$ and
-$c_{44}$ of J\,m$^{-3}$, so $\sqrt{a\,c_{44}}$ has units of J and
-$d\sqrt{a\,c_{44}}$ has units of J\,m, which are the units of $H$ required by
-\eqref{eq:enthalpy}.  The same identity fixes the reference value
-$H_{\mathrm{ref}}=d\sqrt{a\,c_{44}}=\SI{1.89e-21}{\joule\metre}$ used to
-non-dimensionalize the coupling in the tables.
-
+The groups follow from the material file by algebra, so their verification is a comparison of numbers and not a fit.  The elastic speed is
+$c_s=\sqrt{c_{44}/\rho}=\SI{2.7466}{\kilo\metre\per\second}$, giving the frequency unit
+$c_s/(2\pi d)=\SI{2.1857}{\giga\hertz}$ at $d=\SI{200}{\nano\metre}$; the operating point
+$\omega=7.6334\,c_s/d$ is then $f=\SI{16.684}{\giga\hertz}$, the value quoted in the abstract.
+With $a=k_BT/n_0=\SI{2.0828e-39}{\joule\metre^{3}}$ (the temperature
+$T=\SI{301.72}{\kelvin}$ is implied by the Einstein relation for the diffusivity--mobility
+pair, not an independent input), the Debye length is
+$L_D=\SI{2.6797}{\micro\metre}$ and $Q=d/L_D=0.074635$.  The plate is thus thinner than
+$L_D/d=13.40$ times a screening length, the carrier perturbation is not confined to a
+surface layer, and the screening enters \eqref{eq:block} only through the small coefficient
+$Q^{2}=5.57\times10^{-3}$.  The transport group is
+$\alpha_{\mathrm d}=D/(d\,c_s)=0.8283$, of order unity: the diffusion time across the
+thickness, $d^{2}/D=\SI{8.8e-11}{\second}$, is comparable to the elastic transit time
+$2d/c_s=\SI{1.5e-10}{\second}$, so the carrier and elastic sectors are not separated by a
+small parameter and the carrier cannot be condensed away.  Finally $\lambda=\ell/d=0.25$
+and $h=H/H_{\mathrm{ref}}$ with
+$H_{\mathrm{ref}}=d\sqrt{a\,c_{44}}=\SI{1.8927e-21}{\joule\metre}$, which has the units of $H$
+required by \eqref{eq:enthalpy}; the tabulated extreme $|H|=\SI{2.0e-23}{\joule\metre}$ is
+$h=\pm1.06\times10^{-2}$, a one-percent perturbation of the carrier sector.
 
 The model of \eqref{eq:enthalpy} contains four sectors that can be switched off
 independently, and the limits they generate are the ones against which the
@@ -546,13 +444,6 @@ equation \eqref{eq:continuity}, so the plate remains a piezoelectric
 semiconductor; only the direct carrier--gradient enthalpy of
 \eqref{eq:added_coupling} is removed.  This is the limit in which the controls are computed, and it is the limit that shows the
 partition to be a property of the branch and not of the added term.
-
-Two further reductions are used in the text and are not tabulated here: the
-electrostatic reduction, whose two controlling
-ratios are evaluated at the operating point, and the thin-plate limit
-$d/L_D=0.075$, in which the carrier perturbation is not confined to a surface
-layer.
-
 
 The enthalpy \eqref{eq:enthalpy} is a quadratic form in
 $(\varepsilon,\eta,E,\Delta n)$.  It is a saddle in the electric field, because the
