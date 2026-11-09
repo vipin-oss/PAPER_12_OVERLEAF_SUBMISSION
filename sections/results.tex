@@ -110,9 +110,10 @@ relative spread between the five curves is below \SI{0.2}{\percent} over the ful
 The mobility behaves in the same way (panel d): over the factor-of-three range
 $0.00875$ to $0.02625\,\si{\square\metre\per\volt\per\second}$ the linewidth
 changes by the same factor of three, while the backward share is unchanged to
-the same $0.2$ percent.  The two sweeps are in fact identical row by row,
-because the density and the mobility enter the conduction term only through
-their product.  Both results are consistent with $Q=d/L_D=0.075<1$: the
+the same $0.2$ percent.  The two sweeps agree row by row because both quantities enter the conduction
+term through their product, while the density also enters the screening through
+$Q^{2}=5.6\times10^{-3}$, which is small here; the two are therefore equivalent at this $Q$ and not interchangeable in
+general (see \cref{sec:results_sens} for larger densities).  Both results are consistent with $Q=d/L_D=0.075<1$: the
 plate is thinner than the Debye length, the carrier perturbation is not confined
 to a surface layer, and the density enters the problem mainly through the
 conduction loss.
@@ -644,7 +645,7 @@ plate lies to its left, and the intensities are normalized to a common maximum
 so that the backward field is visibly weaker by one to three decades.  The
 incident field approaches the edge at $+10.0^{\circ}$ and the backward field
 leaves it at $-27.9^{\circ}$, both measured from the thickness-integrated
-Poynting flux.
+Poynting flux and from the $x$ axis along the propagation direction (the $+x$ direction for the incident field, the $-x$ direction for the backward field), positive towards $+y$.
 
 Panel (c) is a schematic, but its arrows are not drawn by hand: they are the
 solved directions.  The two wavenumbers point into the plate,
@@ -678,7 +679,7 @@ $2\times10^{18}$ to $2\times10^{23}\,\si{\per\cubic\metre}$, which takes $Q=d/L_
 maximum falls from $0.943$ through $0.828$ to $0.545$ over the first three densities ($2\times10^{18}$, $2\times10^{19}$, $2\times10^{20}\,\si{\per\cubic\metre}$), with the argmax inside the raster.  From
 $2\times10^{21}\,\si{\per\cubic\metre}$ upward the largest sampled value in a window of $\pm0.03$ about the
 fold lies on the edge of the window, so the entries ($\ge0.168$, $\ge0.043$ and $\ge0.174$) are lower bounds and the maximum itself was not located.  At the operating
-point the share stays between $0.0158$ and $0.0410$ over the whole range $2\times10^{18}$ to
+point, which was swept over a wider range than the fold search, the share stays between $0.0158$ and $0.0410$ over the whole range $2\times10^{18}$ to
 $6\times10^{23}\,\si{\per\cubic\metre}$, and its linewidth peaks near $2\times10^{22}\,\si{\per\cubic\metre}$ at
 \SI{8.7}{\mega\hertz}.  The statement of \cref{sec:results_material} that the density sets the loss but not the
 partition therefore holds for the range of \cref{fig:fig02}; at the fold the partition depends on the density through the loss.

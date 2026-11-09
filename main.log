@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.11.3)  9 NOV 2026 06:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.11.3)  9 NOV 2026 07:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -674,67 +674,67 @@ File: figures/fig01_dispersion.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/fig01_dispersion.pdf  used on input line 58.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [20 <./figures/fig01_dispersion.pdf>]
-<figures/fig02_material.pdf, id=574, 469.755pt x 368.57701pt>
+<figures/fig02_material.pdf, id=575, 469.755pt x 368.57701pt>
 File: figures/fig02_material.pdf Graphic file (type pdf)
 <use figures/fig02_material.pdf>
-Package pdftex.def Info: figures/fig02_material.pdf  used on input line 126.
+Package pdftex.def Info: figures/fig02_material.pdf  used on input line 127.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [21] [22 <./figures/fig02_material.pdf>]
-<figures/fig03_geometry.pdf, id=630, 469.755pt x 368.57701pt>
+<figures/fig03_geometry.pdf, id=631, 469.755pt x 368.57701pt>
 File: figures/fig03_geometry.pdf Graphic file (type pdf)
 <use figures/fig03_geometry.pdf>
-Package pdftex.def Info: figures/fig03_geometry.pdf  used on input line 152.
+Package pdftex.def Info: figures/fig03_geometry.pdf  used on input line 153.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [23 <./figures/fig03_geometry.pdf>]
-<figures/fig04_frequency.pdf, id=681, 469.755pt x 531.18451pt>
+<figures/fig04_frequency.pdf, id=682, 469.755pt x 531.18451pt>
 File: figures/fig04_frequency.pdf Graphic file (type pdf)
 <use figures/fig04_frequency.pdf>
-Package pdftex.def Info: figures/fig04_frequency.pdf  used on input line 189.
+Package pdftex.def Info: figures/fig04_frequency.pdf  used on input line 190.
 (pdftex.def)             Requested size: 448.69853pt x 507.37817pt.
  [24] [25 <./figures/fig04_frequency.pdf>] [26] [27]
-<figures/fig05_channel.pdf, id=770, 469.755pt x 368.57701pt>
+<figures/fig05_channel.pdf, id=771, 469.755pt x 368.57701pt>
 File: figures/fig05_channel.pdf Graphic file (type pdf)
 <use figures/fig05_channel.pdf>
-Package pdftex.def Info: figures/fig05_channel.pdf  used on input line 347.
+Package pdftex.def Info: figures/fig05_channel.pdf  used on input line 348.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [28 <./figures/fig05_channel.pdf>] [29]
-<figures/fig06_attenuation.pdf, id=812, 469.755pt x 368.57701pt>
+<figures/fig06_attenuation.pdf, id=813, 469.755pt x 368.57701pt>
 File: figures/fig06_attenuation.pdf Graphic file (type pdf)
 <use figures/fig06_attenuation.pdf>
-Package pdftex.def Info: figures/fig06_attenuation.pdf  used on input line 484.
+Package pdftex.def Info: figures/fig06_attenuation.pdf  used on input line 485.
 
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [30] [31 <./figures/fig06_attenuation.pdf>]
-<figures/fig07_coupling.pdf, id=862, 469.755pt x 368.57701pt>
+<figures/fig07_coupling.pdf, id=863, 469.755pt x 368.57701pt>
 File: figures/fig07_coupling.pdf Graphic file (type pdf)
 <use figures/fig07_coupling.pdf>
-Package pdftex.def Info: figures/fig07_coupling.pdf  used on input line 517.
+Package pdftex.def Info: figures/fig07_coupling.pdf  used on input line 518.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [32 <./figures/fig07_coupling.pdf>]
-<figures/fig08_boundary.pdf, id=908, 469.755pt x 368.57701pt>
+<figures/fig08_boundary.pdf, id=909, 469.755pt x 368.57701pt>
 File: figures/fig08_boundary.pdf Graphic file (type pdf)
 <use figures/fig08_boundary.pdf>
-Package pdftex.def Info: figures/fig08_boundary.pdf  used on input line 548.
+Package pdftex.def Info: figures/fig08_boundary.pdf  used on input line 549.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [33 <./figures/fig08_boundary.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-26.
+27.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-<figures/fig09_validation.pdf, id=959, 469.755pt x 368.57701pt>
+) [34]
+<figures/fig09_validation.pdf, id=966, 469.755pt x 368.57701pt>
 File: figures/fig09_validation.pdf Graphic file (type pdf)
 <use figures/fig09_validation.pdf>
-Package pdftex.def Info: figures/fig09_validation.pdf  used on input line 633.
+Package pdftex.def Info: figures/fig09_validation.pdf  used on input line 634.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
- [34] [35 <./figures/fig09_validation.pdf>]
-<figures/fig10_field.pdf, id=1000, 469.755pt x 368.57701pt>
+<figures/fig10_field.pdf, id=968, 469.755pt x 368.57701pt>
 File: figures/fig10_field.pdf Graphic file (type pdf)
 <use figures/fig10_field.pdf>
-Package pdftex.def Info: figures/fig10_field.pdf  used on input line 663.
+Package pdftex.def Info: figures/fig10_field.pdf  used on input line 664.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
- [36 <./figures/fig10_field.pdf>]) (./sections/conclusions.tex [37]
+ [35 <./figures/fig09_validation.pdf>] [36 <./figures/fig10_field.pdf>]) (./sec
+tions/conclusions.tex [37]
 [38]) (./sections/appendix_derivations.tex [39] [40] [41] [42] [43] [44])
 (./sections/appendix_reproducibility.tex) [45] (./main.bbl [46] [47] [48])
 [49] (./main.aux)
@@ -771,10 +771,10 @@ pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on main.pdf (49 pages, 1006820 bytes).
+Output written on main.pdf (49 pages, 1007343 bytes).
 PDF statistics:
- 1342 PDF objects out of 1440 (max. 8388607)
- 982 compressed objects within 10 object streams
+ 1343 PDF objects out of 1440 (max. 8388607)
+ 983 compressed objects within 10 object streams
  236 named destinations out of 1000 (max. 500000)
  275 words of extra memory for PDF output out of 10000 (max. 10000000)
 
