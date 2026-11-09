@@ -34,38 +34,21 @@ The units follow from the derivatives of the energy.  Stress $\sigma_{ij}=\parti
 \label{sec:governing_constitutive}
 \label{sec:governing_balance}
 
-The only physics added to the classical flexoelectric piezoelectric-semiconductor
-enthalpy is one bilinear term coupling the carrier perturbation to the strain
-gradient,
+The only physics added to the classical flexoelectric piezoelectric-semiconductor enthalpy is one bilinear term that couples the carrier perturbation to the strain gradient,
 \begin{equation}
 \label{eq:added_coupling}
 \Delta\mathcal{H}=\Delta n\,H_{jkl}\,\varepsilon_{jk,l},
 \end{equation}
-with $H_{jkl}$ a third-order tensor whose units are energy times length.  The
-term is not free-standing: it is a piece of a thermodynamic potential, so its two
-conjugates follow from it by differentiation and bring in no independent constants.
-Differentiating with respect to the strain gradient gives the addition to the
-hyperstress,
+where $H_{jkl}$ is a third-order tensor with units of energy times length.  The term belongs to a thermodynamic potential, so its two conjugates follow by differentiation and bring in no independent constants.  Differentiation with respect to the strain gradient and to the carrier density gives
 \begin{equation}
 \label{eq:added_hyperstress}
-\Delta\tau_{jkl}=\frac{\partial\Delta\mathcal{H}}{\partial\varepsilon_{jk,l}}
-=H_{jkl}\,\Delta n ,
+\Delta\tau_{jkl}=\frac{\partial\Delta\mathcal{H}}{\partial\varepsilon_{jk,l}}=H_{jkl}\,\Delta n ,
 \end{equation}
-and differentiating with respect to the carrier density gives the addition to the
-electrochemical potential,
 \begin{equation}
 \label{eq:added_mu}
-\Delta\widetilde\mu=\frac{\partial\Delta\mathcal{H}}{\partial\Delta n}
-=H_{jkl}\,\varepsilon_{jk,l} .
+\Delta\widetilde\mu=\frac{\partial\Delta\mathcal{H}}{\partial\Delta n}=H_{jkl}\,\varepsilon_{jk,l} .
 \end{equation}
-The two additions of \eqref{eq:added_hyperstress}--\eqref{eq:added_mu} are
-reciprocal in the sense of the Maxwell identity
-$\partial^{2}w/\partial\eta_{jkl}\partial(\Delta n)
-=\partial^{2}w/\partial(\Delta n)\partial\eta_{jkl}$, which both sides of the
-pair satisfy with the same $H_{jkl}$; the discretized operator inherits this symmetry, and the numerical test verifies it.  A single scalar component,
-$H\equiv H_{zzz}$, is retained in the executed calculations, so that
-\eqref{eq:added_hyperstress} adds $H\Delta n$ to $\tau_{zzz}$ and
-\eqref{eq:added_mu} adds $H\eta_{zzz}$ to $\widetilde\mu$.
+Only the component $H\equiv H_{zzz}$ is retained in the calculations, so \eqref{eq:added_hyperstress} adds $H\Delta n$ to $\tau_{zzz}$ and \eqref{eq:added_mu} adds $H\eta_{zzz}$ to $\widetilde\mu$.
 
 \paragraph{Relation to the thermodynamic framework.}
 The closest primary work is the thermodynamically consistent theory of Qu, Pan, Zhu and Deng \cite{qu2025thermodynamic}, which derives the constitutive equations of a flexoelectric semiconductor from the free-energy imbalance and contains the drift--diffusion current, the flexoelectric and piezoelectric couplings and the higher-order stress in one framework.  Its explicit free energy, reproduced in \cite{hu2025computational}, is additive and its carrier energy contains no strain gradient, so in that form the strain gradient reaches the carriers only through the flexoelectric polarization that enters Gauss's law.  The bilinear term $\Delta n\,H_{jkl}\varepsilon_{jk,l}$ of \eqref{eq:added_coupling} is absent from that form but not from the article: its Appendix~C.1 adds a chemo-mechanical energy that is linear in the carrier concentration and in the strain gradient, and the part $M^{n}_{IJK}$ corresponds to $H_{jkl}$ here; the article neglects it in its main text and does not pose an edge-scattering problem.  The term is therefore not claimed as new, and what is new is the scattering problem it is used in.  The symbol $H$ is overloaded in the literature: in \cite{hu2025computational} it denotes the sixth-order strain-gradient elasticity tensor, written $A_{ijklmn}$ here, whereas $H_{jkl}$ is a third-order carrier--strain-gradient coefficient (J\,m) and the two are unrelated.  The incremental effect of the term on the edge partition, and the fact that it is not the origin of the backward branch, are quantified in \cref{sec:results_mechanism,sec:results_coupling}.
@@ -84,15 +67,7 @@ w={}&\tfrac12\,\varepsilon_{ij}c_{ijkl}\varepsilon_{kl}
 -q\,\Delta n\,\varphi ,
 \end{aligned}
 \end{equation}
-with $a=k_BT/n_0$.  The terms are, in order, the elastic, strain-gradient,
-dielectric, piezoelectric and flexoelectric energies of the classical
-flexoelectric dielectric \cite{shen2010theory}, the carrier compressibility, the
-added carrier--strain-gradient coupling and the electrostatic energy of the
-mobile charge.  The seventh term, \eqref{eq:added_coupling}, is the one added to the standard enthalpy here, with the structure of the chemo-mechanical term of \cite{qu2025thermodynamic} (Appendix~C),
-and the two entries of \eqref{eq:tau}--\eqref{eq:mu} that it produces are
-\eqref{eq:added_hyperstress}--\eqref{eq:added_mu}.
-
-Differentiating \eqref{eq:enthalpy} gives the constitutive relations
+with $a=k_BT/n_0$.  The terms are, in order, the elastic, strain-gradient, dielectric, piezoelectric and flexoelectric energies of the classical flexoelectric dielectric \cite{shen2010theory}, the carrier compressibility, the added carrier--strain-gradient coupling and the electrostatic energy of the mobile charge.  The seventh term, \eqref{eq:added_coupling}, is the one added here, with the structure of the chemo-mechanical term of \cite{qu2025thermodynamic} (Appendix~C).  Differentiating \eqref{eq:enthalpy} gives the constitutive relations
 \begin{align}
 \sigma_{ij}&=\frac{\partial w}{\partial\varepsilon_{ij}}
 =c_{ijkl}\varepsilon_{kl}-e_{kij}E_k,
@@ -108,94 +83,11 @@ D_i&=-\frac{\partial w}{\partial E_i}
 =a\,\Delta n-q\varphi+H_{jkl}\eta_{jkl}.
 \label{eq:mu}
 \end{align}
-The four relations are the derivatives of one function and they are carried out term by term here, because each sign and each factor of two used later comes
-from one of the four lines.  Writing \eqref{eq:enthalpy} as the sum of its eight
-contributions, $w=\sum_\alpha w_\alpha$, the derivatives are
-\begin{align}
-\frac{\partial w_{\text{el}}}{\partial\varepsilon_{ij}}
-&=\tfrac12 c_{klij}\varepsilon_{kl}+\tfrac12 c_{ijkl}\varepsilon_{kl}
-=c_{ijkl}\varepsilon_{kl},\label{eq:diff_el}\\[2pt]
-\frac{\partial w_{\text{grad}}}{\partial\eta_{ijk}}
-&=\tfrac12 A_{lmnijk}\eta_{lmn}+\tfrac12 A_{ijklmn}\eta_{lmn}
-=A_{ijklmn}\eta_{lmn},\\[2pt]
-\frac{\partial w_{\text{piezo}}}{\partial\varepsilon_{ij}}&=-e_{kij}E_k,
-\qquad
-\frac{\partial w_{\text{flexo}}}{\partial\eta_{ijk}}=-f_{lijk}E_l,
-\nonumber\\[2pt]
-\frac{\partial w_{\text{diel}}}{\partial E_i}&=-\kappa_{ij}E_j,
-\qquad
-\frac{\partial w_{\text{piezo}}}{\partial E_i}=-e_{ijk}\varepsilon_{jk},
-\nonumber\\[2pt]
-\frac{\partial w_{\text{flexo}}}{\partial E_i}&=-f_{ijkl}\eta_{jkl},
-\qquad
-\frac{\partial w_{\text{carr}}}{\partial\Delta n}=a\,\Delta n,
-\nonumber\\[2pt]
-\frac{\partial w_{H}}{\partial\Delta n}&=H_{jkl}\eta_{jkl},
-\qquad
-\frac{\partial w_{\text{es}}}{\partial\Delta n}=-q\varphi,
-\nonumber
-\end{align}
-and \eqref{eq:sigma}--\eqref{eq:mu} are these lines collected, with the electric
-relation taken as $D_i=-\partial w/\partial E_i$ because $E_i$ is the field and
-not its conjugate.  Two remarks make the bookkeeping checkable.  First, the
-symmetries $c_{ijkl}=c_{jikl}=c_{klij}$ and $A_{ijklmn}=A_{lmnijk}$ are what
-merge the two halves of each quadratic derivative in \eqref{eq:diff_el}: because
-the strain $\varepsilon_{ij}$ and the strain gradient $\eta_{ijk}$ are symmetric
-in $(i,j)$, the antisymmetric halves of $c$ and $A$ never contribute, and a
-tensor that violates those symmetries would produce a different stress from the
-same energy.  Second, $w$ is homogeneous of degree two in
-$(\varepsilon,\eta,E,\Delta n)$ apart from the electrostatic term $-q\Delta n
-\varphi$, which is linear in $\Delta n$; Euler's theorem then gives
-\begin{equation}
-\label{eq:euler}
-\varepsilon_{ij}\frac{\partial w}{\partial\varepsilon_{ij}}
-+\eta_{ijk}\frac{\partial w}{\partial\eta_{ijk}}
-+E_i\frac{\partial w}{\partial E_i}
-+\Delta n\frac{\partial w}{\partial\Delta n}
-=2w+q\,\Delta n\,\varphi ,
-\end{equation}
-an identity that is used twice below: once to write the internal energy of a mode
-as $w=\tfrac12[\varepsilon:\sigma+\eta\vdots\tau-E\cdot D+\widetilde\mu\,\Delta n]$
-less the electrostatic term $\tfrac12 q\Delta n\varphi$, and once to check the energy budget.  The factor $\tfrac12$ and the $-q\Delta n\varphi$
-term of \eqref{eq:euler} are the only two places where the quadratic structure
-of the enthalpy enters the calculations explicitly.
+The term-by-term derivatives and the Euler identity for $w$ are given in \cref{app:derivations}.  Every term of \eqref{eq:mu} is an energy: $k_BT\,\Delta n/n_0$ is the chemical part, $-q\varphi$ the electrostatic energy of a particle of charge $-q$, and the $H$ term the energy that the added coupling assigns to a carrier in a strain gradient.
 
-Equation \eqref{eq:mu} is the electrochemical potential of an electron in
-joules: the compressibility term $k_BT\,\Delta n/n_0$ is the chemical part, the
-$-q\varphi$ term is the electrostatic energy of a particle of charge $-q$, and
-the $H$ term is the energy the added coupling assigns to a carrier sitting in a
-strain gradient.  Every term of \eqref{eq:mu} is an energy, which is the convention used throughout; a dimensionless form obtained by dividing
-\eqref{eq:mu} by $k_BT$ is used internally.
+The non-classical entries are reciprocal.  The same tensor $H_{jkl}$ appears in $\Delta n$ in the hyperstress and in $\eta_{jkl}$ in the electrochemical potential, and the same tensor $f_{ijkl}$ appears in the direct and converse flexoelectric terms of $D$ and $\tau$.  This is the Maxwell symmetry of the second derivatives of $w$, and the discretized operator inherits it: reciprocity at $\pm k_y$ is confirmed numerically to $10^{-13}$.  A single flexoelectric component, $f\equiv f_{3zz}$, is retained, so that $D_z=e_{zjk}\varepsilon_{jk}+\kappa_{zz}E_z+f\,\eta_{zzz}$ and $\tau_{zzz}=A_{zzz\,lmn}\eta_{lmn}-fE_z$.  The surface flexoelectric effect \cite{shen2010theory} and electric-field-gradient flexoelectric terms are not included.
 
-The three non-classical entries of \eqref{eq:tau}--\eqref{eq:mu} are reciprocal.
-The pair $(\Delta n,\eta)$ contributes $H_{jkl}\Delta n$ to the hyperstress and
-$H_{jkl}\eta_{jkl}$ to the electrochemical potential; the pair $(E,\eta)$
-contributes $-f_{lijk}E_l$ to the hyperstress and $+f_{ijkl}\eta_{jkl}$ to the
-electric displacement.  In both cases the same tensor appears in the two
-conjugate relations, which is the content of the Maxwell identities
-$\partial^2w/\partial\eta\partial(\Delta n)=\partial^2w/\partial(\Delta
-n)\partial\eta$ and $\partial^2w/\partial\eta\partial E=\partial^2w/\partial
-E\partial\eta$.  The reciprocity of the discretized operator is confirmed
-numerically at $\pm k_y$ to $10^{-13}$.
-
-The flexoelectric sector is the symmetric one generated by the single term
-$-f_{ijkl}E_i\eta_{jkl}$ of \eqref{eq:enthalpy}: the direct effect appears in
-$D$ and the converse effect in $\tau$, both through the same constant.  In the
-executed calculations a single component is retained, $f\equiv f_{3zz}$, so
-that $D_z=e_{zjk}\varepsilon_{jk}+\kappa_{zz}E_z+f\,\eta_{zzz}$ and
-$\tau_{zzz}=A_{zzz\,lmn}\eta_{lmn}-f E_z$.  Neither the surface flexoelectric
-effect of \cite{shen2010theory} nor the electric-field-gradient (higher-order)
-flexoelectric terms are included.  The value of $f$ used, its provenance and
-its measured influence on the reported numbers are given with the results.
-
-\emph{Material symmetry reduction.}  For the $6mm$ class with the polar axis
-$x_3\equiv z$ the four-index tensors of \eqref{eq:sigma}--\eqref{eq:mu} reduce
-to five elastic constants, three piezoelectric constants and two permittivities,
-and the reduction is easiest to follow in two steps: the Voigt matrices first,
-the component relations second.  In the ordering
-$(\varepsilon_{xx},\varepsilon_{yy},\varepsilon_{zz},\gamma_{yz},\gamma_{xz},
-\gamma_{xy})$, with $\gamma_{ij}=2\varepsilon_{ij}$ the engineering shear, the
-elastic matrix of bulk ZnO is
+For the $6mm$ class with the polar axis $x_3\equiv z$, the tensors reduce to five elastic constants, three piezoelectric constants and two permittivities.  In the Voigt ordering $(\varepsilon_{xx},\varepsilon_{yy},\varepsilon_{zz},\gamma_{yz},\gamma_{xz},\gamma_{xy})$, with $\gamma_{ij}=2\varepsilon_{ij}$, the elastic and piezoelectric matrices of ZnO are
 \begin{equation}
 \label{eq:CZnO}
 \mathsf C=
@@ -214,7 +106,6 @@ c_{13}&=\SI{105}{\giga\pascal},& c_{12}&=\SI{121}{\giga\pascal},\\
 c_{44}&=\SI{43}{\giga\pascal},& c_{66}&=\tfrac12(c_{11}-c_{12}),
 \end{aligned}
 \end{equation}
-the piezoelectric matrix $e_{k\,ij}$ (rows $k=x,y,z$) is
 {\small\begin{equation}
 \label{eq:ZnOe}
 \mathsf e=
@@ -228,10 +119,7 @@ e_{33}=\SI{1.32}{\coulomb\per\square\metre},\;
 e_{31}=\SI{-0.57}{\coulomb\per\square\metre},\;
 e_{15}=\SI{-0.48}{\coulomb\per\square\metre},
 \end{equation}}
-and the permittivity is diagonal, $\kappa_{11}=\kappa_{22}$,
-$\kappa_{33}=\SI{8.85e-11}{\farad\per\metre}$, with
-$\kappa_{33}/\varepsilon_0=10$.  Assembling \eqref{eq:CZnO}--\eqref{eq:ZnOe} in
-\eqref{eq:sigma} gives the component relations actually used,
+and the permittivity is diagonal, $\kappa_{11}=\kappa_{22}$, $\kappa_{33}=\SI{8.85e-11}{\farad\per\metre}$.  The component relations used are
 \begin{equation}
 \label{eq:sigmaZnO}
 \begin{aligned}
@@ -246,203 +134,62 @@ $\kappa_{33}/\varepsilon_0=10$.  Assembling \eqref{eq:CZnO}--\eqref{eq:ZnOe} in
 \sigma_{xy}=2c_{66}\varepsilon_{xy},
 \end{aligned}
 \end{equation}
-where the factors of two are the tensor-to-Voigt conversion of the shear
-entries and not a convention of the program.  The hyperstress of
-\eqref{eq:tau} contains the gradient modulus $A_{ijklmn}=\ell^2c_{ijlm}\delta_{kn}$
-of \eqref{eq:gradient_energy}; only one of its components is touched by the two
-non-classical constants retained here, and that component is
 \begin{equation}
 \label{eq:tauZnO}
 \tau_{zzz}=\ell^{2}\Bigl[c_{13}\bigl(\eta_{xxz}+\eta_{yyz}\bigr)
 +c_{33}\,\eta_{zzz}\Bigr]-f\,E_z+H\,\Delta n ,
 \end{equation}
-with $f\equiv f_{3zz}$ and $H\equiv H_{zzz}$ the two single components retained,
-as stated above.  Substituting \eqref{eq:sigmaZnO}--\eqref{eq:tauZnO} and the
-electric relations
 \begin{equation}
 \label{eq:DZnO}
 \begin{aligned}
 D_x&=\kappa_{11}E_x+2e_{15}\varepsilon_{xz},\qquad
 D_y=\kappa_{11}E_y+2e_{15}\varepsilon_{yz},\\
 D_z&=\kappa_{33}E_z+e_{31}(\varepsilon_{xx}+\varepsilon_{yy})
-+e_{33}\varepsilon_{zz}+f\,\eta_{zzz},
++e_{33}\varepsilon_{zz}+f\,\eta_{zzz}.
 \end{aligned}
 \end{equation}
-in the balance laws of the next paragraph produces the coupled field equations.
-Each of them is a differential operator of order four in the mechanical sector
-and of order two in the electrical and carrier sectors, and that order
-difference is the reason the plate supports four wave families per branch, not two.
+The field equations are of fourth order in the mechanical sector and of second order in the electrical and carrier sectors, which is why the plate supports four wave families per branch.
 
-
-The field equations are the Euler--Lagrange equations of the enthalpy
-\eqref{eq:enthalpy}.  The kinematic variations follow from \eqref{eq:strain},
+The field equations are the Euler--Lagrange equations of the enthalpy.  The variations $\delta\varepsilon_{ij}$ and $\delta\eta_{ijk}=\tfrac12(\delta u_{i,jk}+\delta u_{j,ik})$ follow from \eqref{eq:strain}, and because $\tau_{ijk}=\tau_{jik}$ one has $\tau_{ijk}\,\delta\eta_{ijk}=\tau_{ijk}\,\delta u_{i,jk}$.  One integration by parts on the stress and two on the hyperstress move all derivatives onto the fields, and the surface terms are the traction and the double traction,
 \begin{equation}
-\label{eq:var_kinematics}
-\delta\varepsilon_{ij}=\tfrac12\bigl(\delta u_{i,j}+\delta u_{j,i}\bigr),
-\qquad
-\delta\eta_{ijk}=\tfrac12\bigl(\delta u_{i,jk}+\delta u_{j,ik}\bigr),
-\end{equation}
-and the electric variation is $\delta E_i=-\partial_i\delta\varphi$.  The two
-terms of \eqref{eq:var_kinematics} are not equal component by component, and this
-article does not use them as such.  What is used is the contracted identity
-\begin{equation}
-\label{eq:contraction}
-\tau_{ijk}\,\delta\eta_{ijk}=\tau_{ijk}\,\delta u_{i,jk},
-\end{equation}
-which holds because $\eta_{ijk}=\eta_{jik}$ by \eqref{eq:strain} and the
-hyperstress is its conjugate, $\tau_{ijk}=\partial w/\partial\eta_{ijk}$ taken on
-the symmetric subspace, so that $\tau_{ijk}=\tau_{jik}$; the antisymmetric part
-of $\delta u_{i,jk}$ in $(i,j)$ is then annihilated,
-$\tfrac12\tau_{ijk}(\delta u_{i,jk}-\delta u_{j,ik})=0$ by relabelling
-$i\leftrightarrow j$ in the second term.  Only \eqref{eq:contraction} enters the
-integrations by parts below.  With these, the virtual work of the
-internal fields at fixed time is
-\begin{equation*}
-\delta W=\int_V\Bigl[\sigma_{ij}\,\delta\varepsilon_{ij}
-+\tau_{ijk}\,\delta\eta_{ijk}-D_i\,\delta E_i
-+\widetilde\mu\,\delta(\Delta n)\Bigr]\dd V .
-\end{equation*}
-One integration by parts on the derivative carried by the stress and two on
-those carried by the hyperstress move all derivatives onto the fields and
-leave only surface terms,
-\begin{align}
-\int_V\sigma_{ij}\,\delta\varepsilon_{ij}\,\dd V
-&=-\int_V\sigma_{ij,j}\,\delta u_i\,\dd V
-+\oint_{\partial V}n_j\sigma_{ij}\,\delta u_i\,\dd S ,
-\label{eq:ibp_stress}\\[2pt]
+\label{eq:ibp_hyper}
 \int_V\tau_{ijk}\,\delta\eta_{ijk}\,\dd V
-&=\int_V\partial_k\partial_j\tau_{ijk}\,\delta u_i\,\dd V
+=\int_V\partial_k\partial_j\tau_{ijk}\,\delta u_i\,\dd V
 -\oint_{\partial V}n_j\partial_k\tau_{ijk}\,\delta u_i\,\dd S
 +\oint_{\partial V}n_k\tau_{ijk}\,\delta u_{i,j}\,\dd S .
-\label{eq:ibp_hyper}
-\end{align}
-The two boundary integrals of \eqref{eq:ibp_stress}--\eqref{eq:ibp_hyper} are the
-traction and the double traction; they are the surface terms evaluated below.  In the volume, adding the inertial contribution
-$\int_V\rho\ddot u_i\,\delta u_i\dd V$ and requiring that the coefficient of the
-arbitrary $\delta u_i$ vanish gives the mechanical balance
+\end{equation}
+With the inertial term, the mechanical balance is
 \begin{equation}
 \label{eq:momentum}
 \rho\,\ddot u_j=\partial_i\sigma_{ij}-\partial_i\partial_k\tau_{jik},
 \end{equation}
-where the double divergence of the hyperstress enters with a minus sign because
-the two integrations by parts of \eqref{eq:ibp_hyper} produce two sign changes and
-the term is moved to the right-hand side: the gradient energy penalizes
-curvature of the field, so it acts against the elastic restoring force rather
-than with it.  It is convenient to define the
-\emph{effective stress}
+where the double divergence of the hyperstress enters with a minus sign because the gradient energy acts against the elastic restoring force.  With the effective stress
 \begin{equation}
 \label{eq:effective}
 \Sigma_{ij}=\sigma_{ij}-\partial_k\tau_{ijk},
 \end{equation}
-in terms of which \eqref{eq:momentum} is the familiar $\rho\ddot u_j=
-\partial_i\Sigma_{ij}$, and the traction on a surface is $t_j=n_i\Sigma_{ij}$.
-$\Sigma$ is not the quantity that enters the constitutive law; it is the
-divergence of the hyperstress that makes \eqref{eq:momentum} look classical.
+the balance reads $\rho\ddot u_j=\partial_i\Sigma_{ij}$ and the traction on a surface is $t_j=n_i\Sigma_{ij}$.  The expanded out-of-plane component of \eqref{eq:momentum} and of Gauss's law are given in \cref{app:derivations}.
 
-Carrying \eqref{eq:sigmaZnO}--\eqref{eq:DZnO} into \eqref{eq:momentum} gives
-the coupled field equations.  It is enough to write one of the three mechanical
-components out in full, the out-of-plane one, because it is the component in which
-all four sectors appear at once:
-\begin{equation}
-\label{eq:momentum_expanded}
-\begin{aligned}
-&\rho\omega^{2}\widehat u_3
-+\partial_x\bigl(2c_{44}\varepsilon_{xz}-e_{15}E_x\bigr)
-+\partial_y\bigl(2c_{44}\varepsilon_{yz}-e_{15}E_y\bigr)\\
-&\qquad
-+\partial_z\bigl(c_{13}(\varepsilon_{xx}+\varepsilon_{yy})
-+c_{33}\varepsilon_{zz}-e_{33}E_z\bigr)
--\partial_i\partial_k\tau_{3ik}=0 ,
-\end{aligned}
-\end{equation}
-where the last term is the double divergence of the hyperstress of
-\eqref{eq:tauZnO}; its sign is that of \eqref{eq:momentum} after
-$\ddot u_j\to-\omega^{2}u_j$, and it makes the gradient energy stiffen the
-dispersion, $\rho\omega^{2}=ck^{2}+Ak^{4}$ in one dimension.  Of the derivatives it contains, only the
-$(j,k)=(z,z)$ one meets the two non-classical constants, because $f$ and $H$ sit
-in the single component $\tau_{3zz}$; the quantity $\partial_z^{2}\tau_{3zz}$, which enters
-\eqref{eq:momentum_expanded} with a minus sign, contains the terms
-\begin{equation*}
-\partial_z^{2}\bigl(-f\,E_z+H\,\Delta n\bigr)
-= f\,\partial_z^{2}\partial_z\varphi+H\,\partial_z^{2}\Delta n ,
-\end{equation*}
-which is the mechanical signature of both the flexoelectric and the
-carrier--strain-gradient couplings: a strain gradient is driven by the second
-thickness derivative of the potential and by that of the carrier density.  The
-remaining terms of $\partial_i\partial_k\tau_{3ik}$ are the elastic
-$\ell^{2}c_{3jlm}\eta_{lmk}$ of \eqref{eq:gradient_energy}, which supply the
-fourth-order piece of \eqref{eq:momentum_expanded} in the combinations
-$\ell^{2}c_{44}$ (shear) and $\ell^{2}c_{33}$ (thickness stretch).  The two
-in-plane components of \eqref{eq:momentum} have the same structure with
-$(c_{11},c_{44},e_{15},e_{31})$ replacing $(c_{33},c_{44},e_{33},e_{15})$ and
-with the $c_{13}$ coupling between them; they are recorded in
-\cref{app:derivations}.
-
-Variation with respect to $\varphi$ gives Gauss's law
+Variation with respect to $\varphi$ gives Gauss's law,
 \begin{equation}
 \label{eq:gauss}
-\partial_iD_i=-q\,\Delta n,
+\partial_iD_i=-q\,\Delta n .
 \end{equation}
-the minus sign being the charge of the electron.  Substituting
-\eqref{eq:DZnO} in it and using $E_i=-\partial_i\varphi$ expands the statement
-into the electrostatic operator of the model,
-\begin{equation*}
-\begin{aligned}
-&-\kappa_{11}\bigl(\varphi_{,xx}+\varphi_{,yy}\bigr)
--\kappa_{33}\varphi_{,zz}
-+2e_{15}\bigl(\varepsilon_{xz,x}+\varepsilon_{yz,y}\bigr)\\
-&\qquad
-+e_{31}\bigl(\varepsilon_{xx,z}+\varepsilon_{yy,z}\bigr)
-+e_{33}\,\varepsilon_{zz,z}
-+f\,\eta_{zzz,z}
-=-q\,\Delta n ,
-\end{aligned}
-\end{equation*}
-in which the first line holds the dielectric operator and the piezoelectric shear terms, and the second line the remaining piezoelectric and the flexoelectric
-contribution to the charge density.  The
-carrier equation \eqref{eq:continuity} is already in component form once the flux
-is inserted, and the carrier continuity equation in electrochemical form is not a variational
-equation of the enthalpy: the derivative with respect to $\Delta n$ only defines the
-electrochemical potential \eqref{eq:mu}, while the continuity statement
-follows from conservation of carrier number with the flux law,
+The carrier equation is not a variational equation of the enthalpy: the derivative with respect to $\Delta n$ only defines $\widetilde\mu$ in \eqref{eq:mu}, and the continuity statement follows from conservation of carrier number with the drift--diffusion flux,
 \begin{equation}
 \label{eq:continuity}
 \partial_t(\Delta n)+\partial_iJ_i=0,
 \qquad
 J_i=-\frac{D\,n_0}{k_BT}\,\partial_i\widetilde\mu ,
 \end{equation}
-where $J_i$ is the electron \emph{number} flux and $D$ the diffusivity; the
-charge balance follows from \eqref{eq:continuity} by multiplying by $-q$, which
-turns $J_i$ into the current \eqref{eq:current}.  Inserting the flux and the
-harmonic dependence gives the carrier equation in the form used by the solver,
-\begin{equation*}
--\ii\omega\,\Delta n-\frac{D\,n_0}{k_BT}\,\nabla^{2}\widetilde\mu=0 ,
-\qquad\text{i.e.}\qquad
-\Delta n=\frac{\ii D\,n_0}{\omega k_BT}\,\nabla^{2}\widetilde\mu ,
-\end{equation*}
-so the carrier density is proportional to the Laplacian of its own
-electrochemical potential, with the factor $\ii$ that later appears as
-$+\ii\alpha_{\mathrm d}/\omega$ in the weak form \eqref{eq:weak_carrier}.  The
-sign of that factor is fixed here once and carried unchanged: it comes from
-$\partial_t\to-\ii\omega$ and from the minus sign of the diffusive flux, and
-reversing either one would turn the carrier sector from a sink of energy into a
-source.  The
-transport coefficient of \eqref{eq:continuity} follows from the Einstein
-relation: with $\mu_e$ the mobility, $D=\mu_ek_BT/q$, so that
-$Dn_0/k_BT=\mu_en_0/q$ and \eqref{eq:continuity} holds the drift--diffusion content in full.  The associated charge-current density is
+where $J_i$ is the electron number flux and $D=\mu_ek_BT/q$ the diffusivity (Einstein relation).  With $\partial_t\to-\ii\omega$ this gives $\Delta n=\ii D n_0\nabla^{2}\widetilde\mu/(\omega k_BT)$, and the factor $\ii$ reappears as $+\ii\alpha_{\mathrm d}/\omega$ in the weak form \eqref{eq:weak_carrier}; reversing its sign would turn the carrier sector from a sink of energy into a source.  The charge-current density is
 \begin{equation}
 \label{eq:current}
 j_i=-qJ_i=\frac{qDn_0}{k_BT}\,\partial_i\widetilde\mu
 =qD\,\partial_i\Delta n-q\mu_e n_0\,\partial_i\varphi
 +\frac{qDn_0}{k_BT}H_{jkl}\,\partial_i\eta_{jkl},
 \end{equation}
-in which the three terms are the diffusion current, the drift current and the
-carrier--strain-gradient contribution, with the familiar electron signs: the
-diffusion current flows up the density gradient and the drift current along
-the field, the electrons themselves moving against it.  The last term is a prediction of the added coupling: a
-strain-gradient field drives a current even at zero applied field, which is the
-transport signature of the term \eqref{eq:added_coupling}.
-
+whose three terms are the diffusion current, the drift current and the carrier--strain-gradient contribution.  The last term is the transport signature of \eqref{eq:added_coupling}: a strain-gradient field drives a current even at zero applied field.
 
 \subsection{The electric model, the boundary conditions and the energy flux}
 \label{sec:governing_electric}
