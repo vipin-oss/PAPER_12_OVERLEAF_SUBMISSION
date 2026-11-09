@@ -22,4 +22,4 @@ To compile a standalone file in Overleaf: Menu -> Main document -> choose that f
 * Change `\documentclass`/layout to the target journal's template if required (all content is in
   `sections/`, so only `main.tex` needs changing).
 
-The `.bib` has 60 entries, each with a DOI.  The manuscript contains no reference to code or data files.  `main.tex` has a data-availability line ("included in this article; further detail on reasonable request"); change it to the journal's wording if needed.
+The `.bib` has 61 entries, each with a DOI.  The manuscript contains no reference to code or data files.  `main.tex` has a data-availability line ("included in this article; further detail on reasonable request"); change it to the journal's wording if needed.

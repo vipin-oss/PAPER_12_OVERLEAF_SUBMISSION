@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.11.3)  9 NOV 2026 08:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.11.3)  9 NOV 2026 08:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,63 +668,63 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [7] [8{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [9] [10] [11]) (./sec
 tions/numerical_methods.tex [12]
 [13] [14] [15] [16] [17]) (./sections/results.tex [18] [19]
-<figures/fig01_dispersion.pdf, id=525, 469.755pt x 368.57701pt>
+<figures/fig01_dispersion.pdf, id=527, 469.755pt x 368.57701pt>
 File: figures/fig01_dispersion.pdf Graphic file (type pdf)
 <use figures/fig01_dispersion.pdf>
 Package pdftex.def Info: figures/fig01_dispersion.pdf  used on input line 58.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [20 <./figures/fig01_dispersion.pdf>]
-<figures/fig02_material.pdf, id=575, 469.755pt x 368.57701pt>
+<figures/fig02_material.pdf, id=577, 469.755pt x 368.57701pt>
 File: figures/fig02_material.pdf Graphic file (type pdf)
 <use figures/fig02_material.pdf>
 Package pdftex.def Info: figures/fig02_material.pdf  used on input line 127.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [21] [22 <./figures/fig02_material.pdf>]
-<figures/fig03_geometry.pdf, id=631, 469.755pt x 368.57701pt>
+<figures/fig03_geometry.pdf, id=633, 469.755pt x 368.57701pt>
 File: figures/fig03_geometry.pdf Graphic file (type pdf)
 <use figures/fig03_geometry.pdf>
 Package pdftex.def Info: figures/fig03_geometry.pdf  used on input line 153.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [23 <./figures/fig03_geometry.pdf>]
-<figures/fig04_frequency.pdf, id=682, 469.755pt x 531.18451pt>
+<figures/fig04_frequency.pdf, id=684, 469.755pt x 531.18451pt>
 File: figures/fig04_frequency.pdf Graphic file (type pdf)
 <use figures/fig04_frequency.pdf>
 Package pdftex.def Info: figures/fig04_frequency.pdf  used on input line 190.
 (pdftex.def)             Requested size: 448.69853pt x 507.37817pt.
  [24] [25 <./figures/fig04_frequency.pdf>] [26] [27]
-<figures/fig05_channel.pdf, id=771, 469.755pt x 368.57701pt>
+<figures/fig05_channel.pdf, id=773, 469.755pt x 368.57701pt>
 File: figures/fig05_channel.pdf Graphic file (type pdf)
 <use figures/fig05_channel.pdf>
 Package pdftex.def Info: figures/fig05_channel.pdf  used on input line 348.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [28 <./figures/fig05_channel.pdf>] [29]
-<figures/fig06_attenuation.pdf, id=813, 469.755pt x 368.57701pt>
+<figures/fig06_attenuation.pdf, id=815, 469.755pt x 368.57701pt>
 File: figures/fig06_attenuation.pdf Graphic file (type pdf)
 <use figures/fig06_attenuation.pdf>
 Package pdftex.def Info: figures/fig06_attenuation.pdf  used on input line 485.
 
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
-<figures/fig07_coupling.pdf, id=817, 469.755pt x 368.57701pt>
+<figures/fig07_coupling.pdf, id=819, 469.755pt x 368.57701pt>
 File: figures/fig07_coupling.pdf Graphic file (type pdf)
 <use figures/fig07_coupling.pdf>
 Package pdftex.def Info: figures/fig07_coupling.pdf  used on input line 518.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [30] [31 <./figures/fig06_attenuation.pdf>]
 [32 <./figures/fig07_coupling.pdf>]
-<figures/fig08_boundary.pdf, id=909, 469.755pt x 368.57701pt>
+<figures/fig08_boundary.pdf, id=911, 469.755pt x 368.57701pt>
 File: figures/fig08_boundary.pdf Graphic file (type pdf)
 <use figures/fig08_boundary.pdf>
 Package pdftex.def Info: figures/fig08_boundary.pdf  used on input line 549.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [33 <./figures/fig08_boundary.pdf>]
 [34]
-<figures/fig09_validation.pdf, id=964, 469.755pt x 368.57701pt>
+<figures/fig09_validation.pdf, id=966, 469.755pt x 368.57701pt>
 File: figures/fig09_validation.pdf Graphic file (type pdf)
 <use figures/fig09_validation.pdf>
 Package pdftex.def Info: figures/fig09_validation.pdf  used on input line 633.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
  [35 <./figures/fig09_validation.pdf>]
-<figures/fig10_field.pdf, id=1000, 469.755pt x 368.57701pt>
+<figures/fig10_field.pdf, id=1002, 469.755pt x 368.57701pt>
 File: figures/fig10_field.pdf Graphic file (type pdf)
 <use figures/fig10_field.pdf>
 Package pdftex.def Info: figures/fig10_field.pdf  used on input line 663.
@@ -741,10 +741,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FD45E4C4DDD5849D6ABC675A7F4ABD13;6979.
  ) 
 Here is how much of TeX's memory you used:
- 18834 strings out of 476106
- 370066 string characters out of 5793933
+ 18836 strings out of 476106
+ 370113 string characters out of 5793933
  1950975 words of memory out of 5000000
- 40365 multiletter control sequences out of 15000+600000
+ 40366 multiletter control sequences out of 15000+600000
  676261 words of font info for 116 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,18n,91p,1685b,1036s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -765,10 +765,10 @@ lic/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share
 pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (48 pages, 980472 bytes).
+Output written on main.pdf (48 pages, 980909 bytes).
 PDF statistics:
- 1318 PDF objects out of 1440 (max. 8388607)
- 961 compressed objects within 10 object streams
- 228 named destinations out of 1000 (max. 500000)
+ 1321 PDF objects out of 1440 (max. 8388607)
+ 964 compressed objects within 10 object streams
+ 229 named destinations out of 1000 (max. 500000)
  275 words of extra memory for PDF output out of 10000 (max. 10000000)
 
