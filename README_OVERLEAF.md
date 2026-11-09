@@ -6,7 +6,7 @@ Compiler: pdfLaTeX (TeX Live 2023 or newer).  Needs only packages found in stand
 
 | File | What it is | Compile |
 |---|---|---|
-| `main.tex` + `sections/` + `references.bib` | the manuscript (49 pages, 12 pt) | set as main; pdflatex, bibtex, pdflatex x2 (Overleaf does this automatically) |
+| `main.tex` + `sections/` + `references.bib` | the manuscript (48 pages, 12 pt) | set as main; pdflatex, bibtex, pdflatex x2 (Overleaf does this automatically) |
 | `abstract.tex` | abstract only | compile alone -> `abstract.pdf` |
 | `highlights.tex` | five highlight bullets (each <= 85 characters) | compile alone |
 | `cover_letter.tex` | cover letter | compile alone |
