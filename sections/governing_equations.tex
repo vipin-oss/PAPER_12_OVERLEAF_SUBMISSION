@@ -7,7 +7,7 @@ The formulation follows the order in which one enthalpy generates the constituti
 \label{sec:governing_variational}
 \label{sec:governing_kinematics}
 
-Consider a transversely isotropic ($6mm$) n-type ZnO plate of thickness $d$ whose faces are the planes $z=\pm d/2$.  The plate occupies $x<0$ and ends at a traction-free edge at $x=0$.  It is unbounded in $y$, so a single tangential wavenumber $k_y$ is conserved and every field has the form $f(x,z)\,e^{\ii k_yy-\ii\omega t}$ with all three displacement components retained.  The formulation is therefore two-and-a-half-dimensional: the $(x,z)$ cross-section is discretized, $y$ is not.  The independent fields are the displacement $u_i(\vect{x},t)$, the electrostatic potential $\varphi(\vect{x},t)$ and the electron-number perturbation $\Delta n(\vect{x},t)$ measured from the uniform doping $n_0$.  The polar $c$ axis is $x_3\equiv z$.  Latin indices run over $1,2,3$, a comma denotes a spatial derivative and a dot a time derivative.  The electric field is $E_i=-\partial_i\varphi$, the electron charge is $-q$ with $q>0$, and $\widetilde\mu$ is the electrochemical potential of an electron per carrier, measured in joules.
+Consider a transversely isotropic ($6mm$) n-type ZnO plate of thickness $d$ whose faces are the planes $z=\pm d/2$.  The plate occupies $x<0$ and ends at a traction-free edge at $x=0$.  It is unbounded in $y$, so a single tangential wavenumber $k_y$ is conserved and every field has the form $f(x,z)\,e^{\ii k_yy-\ii\omega t}$ with all three displacement components retained.  The formulation is therefore two-and-a-half-dimensional: the $(x,z)$ cross-section is discretized, $y$ is not.  The independent fields, with $\vect x=(x,y,z)$ and the $y$ dependence carried by the factor $\ee^{\ii k_yy}$ so that the amplitudes depend on $(x,z)$ only, are the displacement $u_i(\vect{x},t)$, the electrostatic potential $\varphi(\vect{x},t)$ and the electron-number perturbation $\Delta n(\vect{x},t)$ measured from the uniform doping $n_0$.  The polar $c$ axis is $x_3\equiv z$.  Latin indices run over $1,2,3$, a comma denotes a spatial derivative and a dot a time derivative.  The electric field is $E_i=-\partial_i\varphi$, the electron charge is $-q$ with $q>0$, and $\widetilde\mu$ is the electrochemical potential of an electron per carrier, measured in joules.
 
 The small-strain tensor and its gradient are
 \begin{equation}
@@ -48,7 +48,7 @@ where $H_{jkl}$ is a third-order tensor with units of energy times length.  The 
 \label{eq:added_mu}
 \Delta\widetilde\mu=\frac{\partial\Delta\mathcal{H}}{\partial\Delta n}=H_{jkl}\,\varepsilon_{jk,l} .
 \end{equation}
-Only the component $H\equiv H_{zzz}$ is retained in the calculations, so \eqref{eq:added_hyperstress} adds $H\Delta n$ to $\tau_{zzz}$ and \eqref{eq:added_mu} adds $H\eta_{zzz}$ to $\widetilde\mu$.
+Only the component $H\equiv H_{zzz}$ is retained in the calculations, so \eqref{eq:added_hyperstress} adds $H\Delta n$ to $\tau_{zzz}$ and \eqref{eq:added_mu} adds $H\eta_{zzz}$ to $\widetilde\mu$.  Likewise only $f\equiv f_{3zz}$ is retained among the $6mm$-allowed flexoelectric components.  The model is therefore a reduced single-component coupling model, not the full $6mm$-invariant flexoelectric--carrier model; the remaining symmetry-allowed components are set to zero and no result reported here tests the sensitivity to that choice.
 
 \paragraph{Relation to the thermodynamic framework.}
 The closest primary work is the thermodynamically consistent theory of Qu, Pan, Zhu and Deng \cite{qu2025thermodynamic}, which derives the constitutive equations of a flexoelectric semiconductor from the free-energy imbalance and contains the drift--diffusion current, the flexoelectric and piezoelectric couplings and the higher-order stress in one framework.  Its explicit free energy, reproduced in \cite{hu2025computational}, is additive and its carrier energy contains no strain gradient, so in that form the strain gradient reaches the carriers only through the flexoelectric polarization that enters Gauss's law.  The bilinear term $\Delta n\,H_{jkl}\varepsilon_{jk,l}$ of \eqref{eq:added_coupling} is absent from that form but not from the article: its Appendix~C.1 adds a chemo-mechanical energy that is linear in the carrier concentration and in the strain gradient, and the part $M^{n}_{IJK}$ corresponds to $H_{jkl}$ here; the article neglects it in its main text and does not pose an edge-scattering problem.  The term is therefore not claimed as new, and what is new is the scattering problem it is used in.  The symbol $H$ is overloaded in the literature: in \cite{hu2025computational} it denotes the sixth-order strain-gradient elasticity tensor, written $A_{ijklmn}$ here, whereas $H_{jkl}$ is a third-order carrier--strain-gradient coefficient (J\,m) and the two are unrelated.  The incremental effect of the term on the edge partition, and the fact that it is not the origin of the backward branch, are quantified in \cref{sec:results_mechanism,sec:results_coupling}.
@@ -226,10 +226,10 @@ The grounded condition models perfectly conducting electrodes shorted to each ot
 where
 \begin{equation}
 \label{eq:generalised_traction}
-\bar\sigma_{ix}=\underbrace{\sigma_{ix}-\partial_k\tau_{ixk}}_{\Sigma_{ix}}
--\partial_j^{s}\tau_{ijx},\qquad j=y,z,
+\bar\sigma_{i}(\vect n)=n_k\underbrace{\bigl(\sigma_{ik}-\partial_l\tau_{ikl}\bigr)}_{\Sigma_{ik}}
+-\partial_j^{s}\bigl(n_k\tau_{ijk}\bigr),
 \end{equation}
-is the generalized traction: the effective stress minus the surface divergence of the hyperstress along the face.  The free index is the first index of the hyperstress and the gradient index of the surface term is the face normal $x$, so the term is $\partial_j^s\tau_{ijx}$ and not $\partial_j^s\tau_{ixj}$; a wrong index changes the result.  With $n=e_x$ and a tangential wavenumber $k_y$, $\bar\sigma_{jx}=\Sigma_{jx}-\ii k_y\tau_{jyx}-\partial_z\tau_{jzx}$.  The second entry of \eqref{eq:bc_edge} is the double traction, conjugate to the normal derivative of the displacement on the edge.  In this model $\tau_{ijx}=\ell^{2}c_{ijkl}\eta_{klx}$, so the double traction is present if and only if $\ell\neq0$; no result reported here takes the limit $\ell=0$ with $f\neq0$.  The potential is free on the edge, so $D_x=0$ is its natural condition.  The surviving terms are set out case by case in \cref{app:derivations}.
+is the generalized traction on a surface of unit normal $\vect n$, with $\partial^s_j$ the derivative tangential to that surface: the effective stress minus the surface divergence of the hyperstress.  For the edge $\vect n=\vect e_x$ it is written $\bar\sigma_{ix}$, and for the faces $\vect n=\pm\vect e_z$ it gives $\pm\bar\sigma_{iz}$, with $j=x,y$ tangential there.  The free index is the first index of the hyperstress and its gradient index is contracted with the normal, so the edge term is $\partial_j^s\tau_{ijx}$ and not $\partial_j^s\tau_{ixj}$; a wrong index changes the result.  With $n=e_x$ and a tangential wavenumber $k_y$, $\bar\sigma_{jx}=\Sigma_{jx}-\ii k_y\tau_{jyx}-\partial_z\tau_{jzx}$.  The second entry of \eqref{eq:bc_edge} is the double traction, conjugate to the normal derivative of the displacement on the edge.  In this model $\tau_{ijx}=\ell^{2}c_{ijkl}\eta_{klx}$, so the double traction is present if and only if $\ell\neq0$; no result reported here takes the limit $\ell=0$ with $f\neq0$.  The potential is free on the edge, so $D_x=0$ is its natural condition.  The surviving terms are set out case by case in \cref{app:derivations}.
 
 \paragraph{Far field $x\to-\infty$.}  The solution is the prescribed incident guided mode plus outgoing branches; no other wave arrives from $x=-\infty$.
 
@@ -253,10 +253,10 @@ The power flowing in the $x$ direction, per unit width and integrated over the t
 \label{eq:Px_int}
 \mathcal{P}_x=\tfrac12\Real\int_{-d/2}^{d/2}
 \Bigl[-\Sigma_{xi}\dot u_i^{*}-\tau_{jkx}\dot\varepsilon_{jk}^{*}
-+\varphi\dot D_x^{*}+\widetilde\mu\,\Gamma_x^{*}\Bigr]\dd z
++\varphi\dot D_x^{*}+\widetilde\mu\,J_x^{*}\Bigr]\dd z
 -\tfrac12\Real\Bigl[\tau_{ixz}\dot u_i^{*}\Bigr]_{z=-d/2}^{z=d/2} ,
 \end{equation}
-where $\Sigma_{xi}$ is the effective stress \eqref{eq:effective} and $\Gamma_x$ is the $x$ component of the carrier flux.  The four integrands are the elastic, hyperelastic, dielectric and chemical contributions, and the last term is the line work of the double stress on the two faces.  It does not vanish for a guided mode and it is needed for the flux to balance the loss: without it the single-mode balance $\lvert2\,\Imag k_x\,\mathcal P_x\rvert=P_{\text{diss}}$ is violated at the tens-of-percent level, and with it the balance closes to $3\times10^{-9}$ or better.  The flux $\mathcal P_x$, and not the magnitude of the wavevector, decides whether a mode is backward: a mode is backward when $\mathcal{P}_x<0$ while it is outgoing at the edge.
+where $\Sigma_{xi}$ is the effective stress \eqref{eq:effective} and $J_x$ is the $x$ component of the electron-number flux of \eqref{eq:continuity}.  The four integrands are the elastic, hyperelastic, dielectric and chemical contributions, and the last term is the line work of the double stress on the two faces.  It does not vanish for a guided mode and it is needed for the flux to balance the loss: without it the single-mode balance $\lvert2\,\Imag k_x\,\mathcal P_x\rvert=P_{\text{diss}}$ is violated at the tens-of-percent level, and with it the balance closes to $3\times10^{-9}$ or better.  The flux $\mathcal P_x$, and not the magnitude of the wavevector, decides whether a mode is backward: a mode is backward when $\mathcal{P}_x<0$ while it is outgoing at the edge.
 
 For a scattering solution the identity
 \begin{equation}
@@ -299,8 +299,11 @@ The dependence on $k_x$ is fixed by derivative counting.  The stress $\sigma$ is
 $\varepsilon$ and $E$, each containing one power of $k_x$, and enters the
 mechanical balance through one further derivative, so that term is at most quadratic
 in $k_x$.  The hyperstress $\tau$ is linear in $\eta$, which contains two powers, and
-enters through two derivatives, so that term is at most quartic.  No field in
-\eqref{eq:enthalpy} carries more than one gradient, so no higher power arises.  For a
+enters through two derivatives, so that term is at most quartic.  Counted on the assembled
+operator, each side of the weak form carries at most two powers (one from $\varepsilon$ or $E$, two
+from $\eta$, none from $\Delta n$ or $\widetilde\mu$), so no power above four arises, and four arises
+only from the $\eta$--$\eta$ gradient energy.  The retained couplings add nothing at that order: $H\,\Delta n\,\eta_{zzz}$ pairs a
+zero-power factor with $\eta_{zzz}=\widehat u_3''$, which contains no $k_x$, and $f_{3zz}E_z\eta_{zzz}$ involves only $z$ derivatives.  For a
 vector $\vect q$ of thickness degrees of freedom the reduced problem is therefore a
 polynomial of degree four in $k_x$,
 \begin{equation}
@@ -317,7 +320,7 @@ discretization), and the $k_x^{2}$ coefficient reduces to $\mathsf A_{11}$ becau
 $\mathsf A_{02}+\mathsf A_{20}$ does not arise from this enthalpy.  The odd coefficients
 are Hermitian, being $\ii$ times antisymmetric differences; the even ones carry the
 non-Hermitian carrier transport form.  The degree is exactly four only for $\ell\neq0$:
-$\mathsf A_{22}$ and $\mathsf A_{12}$ come from the strain-gradient energy alone, so
+for the retained $f_{3zz}$ and $H_{zzz}$, $\mathsf A_{22}$ and $\mathsf A_{12}$ come from the strain-gradient energy alone, so
 for $\ell=0$ (with $f$ and $H$ removed) $\mathsf A_{22}=\mathsf A_{12}=0$ and
 \eqref{eq:quartic} collapses to the quadratic problem of the classical
 piezoelectric-semiconductor plate.  The fourth-order structure is thus a property

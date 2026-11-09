@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.11.3)  9 NOV 2026 06:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.11.3)  9 NOV 2026 06:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -659,45 +659,44 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [6]
+) [6] [7]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
 01.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [7] [8{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [9] [10] [11]) (./sec
-tions/numerical_methods.tex [12]
+) [8{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [9] [10] [11]) (./section
+s/numerical_methods.tex [12]
 Underfull \hbox (badness 2671) in paragraph at lines 23--27
 []\T1/lmr/m/n/12 grounded, []: the po-ten-tial ba-sis is formed from the com-bi
 -na-tion $\OML/lmm/m/it/12 P[] \OMS/lmsy/m/n/12 ^^@
  []
 
-[13] [14] [15] [16] [17]) (./sections/results.tex [18]
-<figures/fig01_dispersion.pdf, id=518, 469.755pt x 368.57701pt>
+[13] [14] [15] [16] [17]) (./sections/results.tex [18] [19]
+<figures/fig01_dispersion.pdf, id=524, 469.755pt x 368.57701pt>
 File: figures/fig01_dispersion.pdf Graphic file (type pdf)
 <use figures/fig01_dispersion.pdf>
 Package pdftex.def Info: figures/fig01_dispersion.pdf  used on input line 58.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
- [19] [20 <./figures/fig01_dispersion.pdf>]
+ [20 <./figures/fig01_dispersion.pdf>]
 <figures/fig02_material.pdf, id=573, 469.755pt x 368.57701pt>
 File: figures/fig02_material.pdf Graphic file (type pdf)
 <use figures/fig02_material.pdf>
 Package pdftex.def Info: figures/fig02_material.pdf  used on input line 126.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
- [21] [22 <./figures/fig02_material.pdf>]
-<figures/fig03_geometry.pdf, id=629, 469.755pt x 368.57701pt>
+<figures/fig03_geometry.pdf, id=575, 469.755pt x 368.57701pt>
 File: figures/fig03_geometry.pdf Graphic file (type pdf)
 <use figures/fig03_geometry.pdf>
 Package pdftex.def Info: figures/fig03_geometry.pdf  used on input line 152.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
- [23 <./figures/fig03_geometry.pdf>]
-<figures/fig04_frequency.pdf, id=680, 469.755pt x 531.18451pt>
+ [21] [22 <./figures/fig02_material.pdf>] [23 <./figures/fig03_geometry.pdf>]
+<figures/fig04_frequency.pdf, id=679, 469.755pt x 531.18451pt>
 File: figures/fig04_frequency.pdf Graphic file (type pdf)
 <use figures/fig04_frequency.pdf>
 Package pdftex.def Info: figures/fig04_frequency.pdf  used on input line 189.
 (pdftex.def)             Requested size: 448.69853pt x 507.37817pt.
  [24] [25 <./figures/fig04_frequency.pdf>] [26] [27]
-<figures/fig05_channel.pdf, id=769, 469.755pt x 368.57701pt>
+<figures/fig05_channel.pdf, id=768, 469.755pt x 368.57701pt>
 File: figures/fig05_channel.pdf Graphic file (type pdf)
 <use figures/fig05_channel.pdf>
 Package pdftex.def Info: figures/fig05_channel.pdf  used on input line 347.
@@ -728,22 +727,22 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-<figures/fig09_validation.pdf, id=958, 469.755pt x 368.57701pt>
+) [34]
+<figures/fig09_validation.pdf, id=963, 469.755pt x 368.57701pt>
 File: figures/fig09_validation.pdf Graphic file (type pdf)
 <use figures/fig09_validation.pdf>
 Package pdftex.def Info: figures/fig09_validation.pdf  used on input line 633.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
- [34] [35 <./figures/fig09_validation.pdf>]
-<figures/fig10_field.pdf, id=998, 469.755pt x 368.57701pt>
+ [35 <./figures/fig09_validation.pdf>]
+<figures/fig10_field.pdf, id=999, 469.755pt x 368.57701pt>
 File: figures/fig10_field.pdf Graphic file (type pdf)
 <use figures/fig10_field.pdf>
 Package pdftex.def Info: figures/fig10_field.pdf  used on input line 663.
 (pdftex.def)             Requested size: 448.69853pt x 352.05833pt.
- [36 <./figures/fig10_field.pdf>]) (./sections/conclusions.tex [37]
-[38]) (./sections/appendix_derivations.tex [39] [40] [41] [42] [43] [44])
-(./sections/appendix_reproducibility.tex) [45] (./main.bbl [46] [47] [48])
-[49] (./main.aux)
+ [36 <./figures/fig10_field.pdf>]) (./sections/conclusions.tex [37])
+[38] (./sections/appendix_derivations.tex [39] [40] [41] [42] [43])
+(./sections/appendix_reproducibility.tex [44]) (./main.bbl [45] [46] [47])
+[48] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -752,13 +751,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5F3B618D466D4944F0809601191601E9;7991.
  ) 
 Here is how much of TeX's memory you used:
- 18888 strings out of 476106
- 370829 string characters out of 5793933
- 1950975 words of memory out of 5000000
+ 18887 strings out of 476106
+ 370822 string characters out of 5793933
+ 1949975 words of memory out of 5000000
  40407 multiletter control sequences out of 15000+600000
  676579 words of font info for 117 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 75i,18n,91p,1685b,1033s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,18n,91p,1685b,1040s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/p
@@ -777,10 +776,10 @@ pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on main.pdf (49 pages, 1003926 bytes).
+Output written on main.pdf (48 pages, 1006068 bytes).
 PDF statistics:
- 1341 PDF objects out of 1440 (max. 8388607)
- 981 compressed objects within 10 object streams
- 236 named destinations out of 1000 (max. 500000)
+ 1336 PDF objects out of 1440 (max. 8388607)
+ 977 compressed objects within 10 object streams
+ 235 named destinations out of 1000 (max. 500000)
  275 words of extra memory for PDF output out of 10000 (max. 10000000)
 
