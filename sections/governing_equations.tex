@@ -327,7 +327,7 @@ piezoelectric-semiconductor plate.  The fourth-order structure is thus a propert
 of the strain-gradient energy, not of the carrier physics.
 
 Read by sectors and not by powers of $k_x$, the same operator has a $3\times3$ block
-structure.  With unknowns ordered as
+structure.  With $\mathsf B^{,l}$ the strain operator differentiated once more along $l=x,y,z$ and unknowns ordered as
 $(\widehat{\vect u},\widehat{\boldsymbol\varphi},\widetilde{\boldsymbol\mu})$,
 \begin{equation}
 \label{eq:sector_blocks}
@@ -340,7 +340,7 @@ $(\widehat{\vect u},\widehat{\boldsymbol\varphi},\widetilde{\boldsymbol\mu})$,
 \qquad
 \begin{aligned}
 \mathsf A_{uu}&=\langle\mathsf B,\mathsf C\mathsf B\rangle
-+\lambda^{2}\langle\partial_\zeta\mathsf B,\mathsf C\partial_\zeta\mathsf B\rangle
++\lambda^{2}\sum_{l}\langle\mathsf B^{,l},\mathsf C\mathsf B^{,l}\rangle
 -\omega^{2}\langle\mathsf U,\mathsf U\rangle,\\
 \mathsf A_{u\varphi}&=\langle\mathsf B,\mathsf e^{\mathsf T}\mathsf G\rangle
 +f\langle\partial_\zeta\mathsf B^{(2)},\mathsf G^{(2)}\rangle,\\

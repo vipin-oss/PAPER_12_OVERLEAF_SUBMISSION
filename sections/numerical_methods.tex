@@ -13,19 +13,19 @@ $z$.  Legendre polynomials are used for all fields, in the scaled variable
 $\zeta=2z/d\in[-1,1]$,
 \begin{equation}
 \label{eq:basis}
-U_i(x,\zeta)=\sum_{j=0}^{n-1}U_{ij}(x)\,P_j(\zeta),\qquad
-N(x,\zeta)=\sum_{j=0}^{n-1}N_{j}(x)\,P_j(\zeta),
+U_i(x,\zeta)=\sum_{j=0}^{n}U_{ij}(x)\,b_j(\zeta),\qquad
+N(x,\zeta)=\sum_{j=0}^{n}N_{j}(x)\,b_j(\zeta),\qquad
+b_j=\sqrt{2j+1}\,P_j ,
 \end{equation}
-with $P_j$ the Legendre polynomial of degree $j$ and $n$ the number of
-thickness modes.  The two electrical cases use different potential spaces,
+with $P_j$ the Legendre polynomial of degree $j$, $b_j$ the orthonormal scaled form of \eqref{eq:app_basis}, $n$ the polynomial degree and $N=n+1$ the number of basis functions per field.  The two electrical cases use different potential spaces,
 which is how the essential and natural conditions are realized:
 \begin{itemize}
 \item grounded, \eqref{eq:bc_grounded}: the potential basis is formed from the
-combination $P_j-\sqrt{(2j+1)/(2j+5)}\,P_{j+2}$, which vanishes at
-$\zeta=\pm1$ for all $j$, so $\varphi=0$ holds on both faces to machine precision and the
-space has $n-2$ members;
-\item open circuit, the second condition of \eqref{eq:bc_grounded}: all $n$
-modes are kept and unconstrained, so $D_z=0$ is imposed weakly through
+combination $\psi_j=b_j-\sqrt{(2j+1)/(2j+5)}\,b_{j+2}$, which vanishes at
+$\zeta=\pm1$ for all $j$ because $b_j(\pm1)=(\pm1)^{j}\sqrt{2j+1}$, so $\varphi=0$ holds on both faces to machine precision and the
+space has $N-2$ members;
+\item open circuit, the second condition of \eqref{eq:bc_grounded}: all $N$
+basis functions are kept and unconstrained, so $D_z=0$ is imposed weakly through
 the surface term of the weak form.
 \end{itemize}
 The mechanical conditions \eqref{eq:bc_faces_mech} and the blocking condition
@@ -104,8 +104,8 @@ carries the compressibility $a(\Delta n)^{2}$, the charge $Q$ and the coupling $
 \label{eq:block}
 \begin{aligned}
 \mathsf A_{rs}={}&\bigl\langle\mathsf B_r,\mathsf C\,\mathsf B_s\bigr\rangle
-+\lambda^{2}\bigl\langle\partial_\zeta^{l}\mathsf B_r,
-\mathsf C\,\partial_\zeta^{l}\mathsf B_s\bigr\rangle
++\lambda^{2}\sum_{l}\bigl\langle\mathsf B^{,l}_r,
+\mathsf C\,\mathsf B^{,l}_s\bigr\rangle
 +\bigl\langle\mathsf G_r,\mathsf e\,\mathsf B_s\bigr\rangle
 +\bigl\langle\mathsf B_r,\mathsf e^{\mathsf T}\mathsf G_s\bigr\rangle
 -\bigl\langle\mathsf G_r,\boldsymbol\kappa\,\mathsf G_s\bigr\rangle\\
@@ -119,7 +119,7 @@ carries the compressibility $a(\Delta n)^{2}$, the charge $Q$ and the coupling $
 \end{equation}
 in the inner product $\langle\vect a,\vect b\rangle=\int_{-1/2}^{1/2}
 \vect a^{*\mathsf T}\vect b\,\dd s$ over the half-interval coordinate
-\eqref{eq:app_measures}, with the complex conjugate of the test factor, and with the eight terms, in order, the elastic, strain-gradient,
+\eqref{eq:app_measures}, with the complex conjugate of the test factor, and where $\mathsf B^{,l}$ is the strain operator differentiated once more along $l=x,y,z$ ($\ii k_x$ through the index $r,s$, $\ii k_y$, and $\partial_\zeta$), and with the eight terms, in order, the elastic, strain-gradient,
 piezoelectric (two cross terms), dielectric, flexoelectric, carrier-transport,
 carrier-compressibility-and-coupling, and inertial contributions.  The first,
 second, third, fifth and sixth lines of \eqref{eq:block} are the discretization of
